@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>flaps.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>base</object-name>
+    <object-name>trouspedestal</object-name>
+    <object-name>flaps</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>flaps</object-name>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/flight/flaps</property>
+        <factor> -0.2 </factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>flaps</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> -47 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

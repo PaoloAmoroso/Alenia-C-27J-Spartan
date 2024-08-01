@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel1.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>buttons</object-name>
+    <object-name>texte</object-name>
+
+    <object-name>FD.hdg</object-name>
+    <object-name>FD.hdg-annun</object-name>
+    <object-name>FD.nav</object-name>
+    <object-name>FD.nav-annun</object-name>
+    <object-name>FD.alt</object-name>
+    <object-name>FD.alt-annun</object-name>
+    <object-name>FD.bank</object-name>
+    <object-name>FD.bank-annun</object-name>
+    <object-name>FD.ap</object-name>
+    <object-name>FD.ap-annun</object-name>
+    <object-name>FD.YD</object-name>
+    <object-name>FD.YD-annun</object-name>
+    <object-name>FD.vs</object-name>
+    <object-name>FD.vs-annun</object-name>
+    <object-name>FD.speed</object-name>
+    <object-name>FD.speed-annun</object-name>
+    <object-name>ASEL.btn</object-name>
+    <object-name>VS.btn</object-name>
+    <object-name>HDG.btn</object-name>
+    <object-name>FD.nav1</object-name>
+    <object-name>FD.nav1-annun</object-name>
+    <object-name>CRS1.btn</object-name>
+    <object-name>FD.nav2</object-name>
+    <object-name>FD.nav2-annun</object-name>
+    <object-name>CRS2.btn</object-name>
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>buttons</object-name>
+    <object-name>texte</object-name>
+    <object-name>FD.hdg</object-name>
+    <object-name>FD.nav</object-name>
+    <object-name>FD.alt</object-name>
+    <object-name>FD.bank</object-name>
+    <object-name>FD.ap</object-name>
+    <object-name>FD.YD</object-name>
+    <object-name>FD.vs</object-name>
+    <object-name>FD.speed</object-name>
+    <object-name>ASEL.btn</object-name>
+    <object-name>VS.btn</object-name>
+    <object-name>HDG.btn</object-name>
+    <object-name>FD.nav1</object-name>
+    <object-name>CRS1.btn</object-name>
+    <object-name>FD.nav2</object-name>
+    <object-name>CRS2.btn</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>FD.hdg-annun</object-name>
+    <object-name>FD.nav-annun</object-name>
+    <object-name>FD.alt-annun</object-name>
+    <object-name>FD.bank-annun</object-name>
+    <object-name>FD.ap-annun</object-name>
+    <object-name>FD.YD-annun</object-name>
+    <object-name>FD.vs-annun</object-name>
+    <object-name>FD.speed-annun</object-name>
+    <object-name>FD.nav1-annun</object-name>
+    <object-name>FD.nav2-annun</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
+      <red>   0 </red>
+      <green> 2 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <!-- HDG -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.hdg</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>pilotauto.FD_set_mode("hdg")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.hdg-annun</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/locks/heading</property>
+        <value>HDG</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>horizontal</drag-direction>
+    <object-name>HDG.btn</object-name>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>autopilot/settings/heading-bug-deg</property>
+        <factor> 1 </factor>
+        <min>   0 </min>
+        <max> 360 </max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>HDG.btn</object-name>
+    <property>autopilot/settings/heading-bug-deg</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 360 </ind><dep> 275 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.09251 </y-m>
+      <z-m> -0.00783 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- BANK -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.bank</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>pilotauto.FD_set_mode("bank")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.bank-annun</object-name>
+    <condition>
+      <less-than>
+        <property>autopilot/settings/low-bank</property>
+        <value>1</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- VS -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.vs</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>pilotauto.FD_set_mode("vs")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.vs-annun</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/locks/altitude</property>
+        <value>VS</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>horizontal</drag-direction>
+    <object-name>VS.btn</object-name>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>autopilot/settings/vertical-speed-fpm</property>
+        <factor> 1 </factor>
+        <min>0</min>
+        <max>1500</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>VS.btn</object-name>
+    <property>autopilot/settings/vertical-speed-fpm</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1500 </ind><dep> 275 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.01843 </y-m>
+      <z-m> -0.00783 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- CRS 1 -->
+  <!--
+  <animation>
+    <type>pick</type>
+    <object-name>FD.nav1</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>autopilot/settings/nav-source</property>
+        <value>NAV1</value>
+      </binding>
+    </action>
+  </animation>
+  -->
+  <animation>
+    <type>select</type>
+    <object-name>FD.nav1-annun</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/settings/nav-source</property>
+        <value>NAV1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>horizontal</drag-direction>
+    <object-name>CRS1.btn</object-name>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav/radials/selected-deg</property>
+        <factor> 1 </factor>
+        <min>0</min>
+        <max>360</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>CRS1.btn</object-name>
+    <property>instrumentation/nav/radials/selected-deg</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 360 </ind><dep> 275 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.14950 </y-m>
+      <z-m> -0.00783 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- CRS 2 -->
+  <!--
+  <animation>
+    <type>pick</type>
+    <object-name>FD.nav2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>autopilot/settings/nav-source</property>
+        <value>NAV2</value>
+      </binding>
+    </action>
+  </animation>
+  -->
+  <animation>
+    <type>select</type>
+    <object-name>FD.nav2-annun</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/settings/nav-source</property>
+        <value>NAV2</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>horizontal</drag-direction>
+    <object-name>CRS2.btn</object-name>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
+        <factor> 1 </factor>
+        <min>0</min>
+        <max>360</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>CRS2.btn</object-name>
+    <property>instrumentation/nav[1]/radials/selected-deg</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 360 </ind><dep> 275 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.14870 </y-m>
+      <z-m> -0.00783 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- SPEED speed-with-throttle -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.speed</object-name>
+    <visible>true</visible>
+    <condition>
+      <not-equals>
+        <property>autopilot/locks/speed</property>
+        <value>speed-with-pitch-trim</value>
+      </not-equals>
+    </condition>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>autopilot/locks/speed</property>
+        <value>speed-with-pitch-trim</value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>FD.speed</object-name>
+    <visible>true</visible>
+    <condition>
+      <equals>
+        <property>autopilot/locks/speed</property>
+        <value>speed-with-pitch-trim</value>
+      </equals>
+    </condition>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>autopilot/locks/speed</property>
+        <value></value>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.speed-annun</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>autopilot/locks/speed</property>
+          <value>speed-with-pitch-trim</value>
+        </equals>
+        <equals>
+          <property>autopilot/locks/speed</property>
+          <value>speed-with-throttle</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <!-- ASEL -->
+  <animation>
+    <type>knob</type>
+    <drag-direction>horizontal</drag-direction>
+    <object-name>ASEL.btn</object-name>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>autopilot/settings/asel</property>
+        <factor> 1 </factor>
+        <min>0</min>
+        <max>510</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ASEL.btn</object-name>
+    <property>autopilot/settings/asel</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 510 </ind><dep> 280 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.00000 </x-m>
+      <y-m>  0.09428 </y-m>
+      <z-m> -0.00783 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- NAV -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.nav</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>pilotauto.FD_nav_src_set("nav");</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.nav-annun</object-name>
+    <condition>
+      <or>
+        <equals>
+          <property>autopilot/locks/heading</property>
+          <value>LNAV</value>
+        </equals>
+        <equals>
+          <property>autopilot/locks/heading</property>
+          <value>VOR</value>
+        </equals>
+        <equals>
+          <property>autopilot/locks/heading</property>
+          <value>LOC</value>
+        </equals>
+        <equals>
+          <property>autopilot/locks/heading-arm</property>
+          <value>VOR</value>
+        </equals>
+        <equals>
+          <property>autopilot/locks/heading-arm</property>
+          <value>LOC</value>
+        </equals>
+      </or>
+    </condition>
+  </animation>
+
+  <!-- ALT -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.alt</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>pilotauto.FD_set_mode("alt")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.alt-annun</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/locks/altitude</property>
+        <value>ALT</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- AP -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.ap</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>pilotauto.FD_set_mode("ap")</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.ap-annun</object-name>
+    <condition>
+      <not-equals>
+        <property>autopilot/locks/AP-status</property>
+        <value></value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <!-- YD -->
+  <animation>
+    <type>pick</type>
+    <object-name>FD.YD</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>pilotauto.FD_set_mode("yd");</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FD.YD-annun</object-name>
+    <condition>
+      <property>autopilot/locks/yaw-damper</property>
+    </condition>
+  </animation>
+
+</PropertyList>

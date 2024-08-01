@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <particlesystem>
+    <name>water</name>
+    <type>normal</type>
+    <texture>water.png</texture>
+
+    <condition>
+      <property>controls/armament/trigger</property>
+    </condition>
+
+    <emissive>false</emissive>
+    <lighting>false</lighting>
+
+    <attach> world     </attach>
+    <align>  billboard </align>
+
+    <placer>
+      <type>segments</type>
+      <vertex>
+        <x-m> -2.28 </x-m>
+        <y-m>  0.00 </y-m>
+        <z-m>  0.00 </z-m>
+      </vertex>
+      <vertex>
+        <x-m>  0.00 </x-m>
+        <y-m>  0.00 </y-m>
+        <z-m>  0.00 </z-m>
+      </vertex>
+      <vertex>
+        <x-m>  2.28 </x-m>
+        <y-m>  0.00 </y-m>
+        <z-m>  0.00 </z-m>
+      </vertex>
+    </placer>
+
+    <shooter>
+      <theta-min-deg> 177 </theta-min-deg>
+      <theta-max-deg> 183 </theta-max-deg>
+      <phi-min-deg>    -2 </phi-min-deg>
+      <phi-max-deg>     2 </phi-max-deg>
+      <speed-mps>
+        <value>  5.8 </value>
+        <spread> 3.0 </spread>
+      </speed-mps>
+      <rotation-speed>
+        <x-min-deg-sec> -15 </x-min-deg-sec>
+        <y-min-deg-sec>  15 </y-min-deg-sec>
+        <z-min-deg-sec> -15 </z-min-deg-sec>
+        <x-max-deg-sec>  15 </x-max-deg-sec>
+        <y-max-deg-sec> -15 </y-max-deg-sec>
+        <z-max-deg-sec>  15 </z-max-deg-sec>
+      </rotation-speed>
+    </shooter>
+
+    <counter>
+      <particles-per-sec>
+        <value>  0 </value>
+        <spread> 100 </spread>
+      </particles-per-sec>
+    </counter>
+
+    <particle>
+      <start>
+        <color>
+          <red><value>   1.0 </value></red>
+          <green><value> 1.0 </value></green>
+          <blue><value>  1.0 </value></blue>
+          <alpha><value> 0.1 </value></alpha>
+        </color>
+        <size><value>    0.7 </value></size>
+      </start>
+      <end>
+        <color>
+          <red><value>   0.80 </value></red>
+          <green><value> 0.80 </value></green>
+          <blue><value>  0.80 </value></blue>
+          <alpha><value> 0.01 </value></alpha>
+        </color>
+        <size><value>    9.00 </value></size>
+      </end>
+
+      <life-sec>
+        <value>  9 </value>
+        <spread> 4 </spread>
+      </life-sec>
+
+      <mass-kg> 50.0 </mass-kg>
+      <radius-m> 0.5 </radius-m>
+    </particle>
+
+    <program>
+      <fluid>   water </fluid>
+      <gravity> true  </gravity>
+      <wind>    true  </wind>
+    </program>
+
+  </particlesystem>
+
+</PropertyList>

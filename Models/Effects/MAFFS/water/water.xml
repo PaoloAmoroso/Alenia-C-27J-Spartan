@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <name>WaterNOALS</name>
+    <path>Classic/water.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>WaterNOALS</object-name>
+    <condition>
+      <not><property>/sim/rendering/shaders/skydome</property></not>
+    </condition>
+  </animation>
+
+  <model>
+    <name>WaterALS</name>
+    <path>ALS/water.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>WaterALS</object-name>
+    <condition>
+      <property>/sim/rendering/shaders/skydome</property>
+    </condition>
+  </animation>
+
+  <model>
+    <name>WaterHDR</name>
+    <path>HDR/water.xml</path>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>WaterHDR</object-name>
+    <condition>
+      <property>/sim/rendering/hdr/hdr-enabled</property>
+    </condition>
+  </animation>
+
+</PropertyList>

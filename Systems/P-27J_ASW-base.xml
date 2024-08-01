@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Systems/P-27J-views.xml">
+
+  <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/submodels.xml</path>
+      <path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Weapons/MU90/release.xml</path>
+      <path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/ASW.xml</path>
+    </submodels>
+
+    <description>Leonardo P-27J ASW</description>
+    <author>Patrizio MELIS (3D/FDM), Emmanuel BARANGER (FDM), Paolo AMOROSO</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>1.0</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/Alenia-C-27J-Spartan/P-27J-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/Alenia-C-27J-Spartan/Sounds/C-27J-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Alenia-C-27J-Spartan/Models/P-27J.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model> 
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                          <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                          <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                          <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                          <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                          <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                          <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                          <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                          <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>      <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>          <!-- 9 strobe-lights -->
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                     <!-- altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>                    <!-- altitude for Smoke/Trail -->
+        <float n="4" alias="/sim/model/door-positions/leftbagage/position-norm"/>
+        <float n="5" alias="/sim/model/door-positions/rightbagage/position-norm"/>
+        <float n="6" alias="/engines/engine[0]/n1"/>
+        <float n="7" alias="/engines/engine[0]/n2"/>
+        <float n="8" alias="/engines/engine[1]/n1"/>
+        <float n="9" alias="/engines/engine[1]/n2"/>
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms"/>
+        <float n="16" alias="/controls/engines/engine[0]/throttle" />
+        <float n="17" alias="/controls/engines/engine[1]/throttle" />
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <help include="Systems/help_ASW.xml"/>
+
+    <!-- <flaps include="flaps.xml"/> -->
+
+    <menubar include="Dialogs/P-27J-menu.xml"/>
+
+    <weight n="0">
+               <name>Mission Payload</name>
+               <weight-lb>1800</weight-lb>
+               <max-lb>12000</max-lb>
+               <min-lb>0</min-lb>
+    </weight>
+    <weight n="1">
+      <name>Pylon 1</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>MU90 Impact</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+            <opt>
+               <name>Marte-ER</name>
+               <lbs>694</lbs>
+               <weight-lb>694</weight-lb>
+            </opt>
+     </weight>	
+	<weight n="2">
+      <name>Pylon 2</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>MU90 Impact</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+            <opt>
+               <name>Marte-ER</name>
+               <lbs>694</lbs>
+               <weight-lb>694</weight-lb>
+            </opt>
+     </weight>
+     <weight n="3">
+      <name>Pylon 3</name>
+      <tank>2</tank>
+      <weight-lb type="float">0</weight-lb>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>MU90 Impact</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+            <opt>
+               <name>Marte-ER</name>
+               <lbs>694</lbs>
+               <weight-lb>694</weight-lb>
+            </opt>
+            <opt>
+               <name>Tank 1000 Kg</name>
+               <lbs>2205</lbs>
+               <gals>329</gals>
+            </opt>
+     </weight>
+     <weight n="4">
+      <name>Pylon 4</name>
+      <tank>3</tank>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>MU90 Impact</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+            <opt>
+               <name>Marte-ER</name>
+               <lbs>694</lbs>
+               <weight-lb>694</weight-lb>
+            </opt>
+            <opt>
+               <name>Tank 1000 Kg</name>
+               <lbs>2205</lbs>
+               <gals>329</gals>
+            </opt>
+     </weight>
+	<weight n="5">
+      <name>Pylon 5</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>MU90 Impact</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+            <opt>
+               <name>Marte-ER</name>
+               <lbs>694</lbs>
+               <weight-lb>694</weight-lb>
+            </opt>
+     </weight>
+     <weight n="6">
+      <name>Pylon 6</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>MU90 Impact</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+            <opt>
+               <name>Marte-ER</name>
+               <lbs>694</lbs>
+               <weight-lb>694</weight-lb>
+            </opt>
+     </weight>
+
+  </sim>
+
+  <input include="Systems/P-27J_ASW-keyboard.xml"/>
+
+  <controls include="Systems/controls.xml"/>
+
+  <instrumentation include="Systems/instruments.xml"/>
+
+  <instrumentation include="Systems/instrumentation.xml"/>
+  
+  <engines include="Systems/engines.xml"/>
+   
+  <nasal>
+    <doors>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/doors.nas</file>
+    </doors>
+    <C27J>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/liveries.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/light.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Electrical.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Systems.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/cdu.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/immat.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/map.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/nd.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/convert.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radio.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/system.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/dialog.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Radar.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/mad.nas</file>
+    </C27J>
+
+    <radar>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radar.nas</file>
+    </radar>
+    <terrain-map>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/terrain-map.nas</file>
+    </terrain-map>
+      
+    <engines>
+      <file>Aircraft/Generic/Engines/generic-yasim-engine.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/engines-yasim.nas</file>
+    </engines>
+  </nasal>
+
+</PropertyList>

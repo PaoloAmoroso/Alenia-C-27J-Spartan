@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>/sim/model/hide-NG</path>
+  <path>/sim/model/hide-probe</path>
+  <path>/sim/model/hide-MAFFS</path>
+
+</PropertyList>

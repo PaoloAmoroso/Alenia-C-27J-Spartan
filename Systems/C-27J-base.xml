@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Systems/C-27J-views.xml">
+
+  <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/submodels.xml</path>
+    </submodels>
+
+    <description>Alenia C-27J Spartan (YASim)</description>
+    <author>Patrizio MELIS (3D/FDM), Emmanuel BARANGER (FDM), Paolo AMOROSO (Upgrades)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>1.0</fuel-fraction>
+    
+    <startup>
+      <splash-texture>Aircraft/Alenia-C-27J-Spartan/C-27J-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/Alenia-C-27J-Spartan/Sounds/C-27J-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Alenia-C-27J-Spartan/Models/C-27J.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <hide-flir>false</hide-flir>
+      <hide-probe>true</hide-probe>
+      <!-- Magnetic Property works with MAD -->
+      <!-- <magnetic>true</magnetic> -->
+    </model> 
+
+    <instrumentation include="instrumentation.xml"/>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+    
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                          <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                          <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                          <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                          <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                          <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                          <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                          <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                          <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>      <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>          <!-- 9 strobe-lights -->
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                     <!-- altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft"> 0 </float>                    <!-- altitude for Smoke/Trail -->
+        <float n="4" alias="/sim/model/door-positions/leftbagage/position-norm"/>
+        <float n="5" alias="/sim/model/door-positions/rightbagage/position-norm"/>
+        <float n="6" alias="/engines/engine[0]/n1"/>
+        <float n="7" alias="/engines/engine[0]/n2"/>
+        <float n="8" alias="/engines/engine[1]/n1"/>
+        <float n="9" alias="/engines/engine[1]/n2"/>
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms"/>
+        <float n="16" alias="/controls/engines/engine[0]/throttle" />
+        <float n="17" alias="/controls/engines/engine[1]/throttle" />
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+    
+    <help include="Systems/help.xml"/>
+
+    <flaps include="Systems/flaps.xml"/>
+
+    <menubar include="Dialogs/C-27J-menu.xml"/>
+
+    <aircraft-data include="aircraft-data.xml"/>
+
+  </sim>
+
+  <input include="Systems/C-27J-keyboard.xml"/>
+
+  <controls include="Systems/controls.xml"/>
+
+  <instrumentation include="Systems/instruments.xml"/>
+  
+  <engines include="Systems/engines.xml"/>
+   
+  <nasal>
+    <doors>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/doors.nas</file>
+    </doors>
+    <C27J>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/liveries.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/light.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Electrical.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Systems.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/cdu.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/immat.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/map.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/nd.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/convert.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radio.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/system.nas</file>
+    </C27J>
+
+    <radar>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radar.nas</file>
+    </radar>
+    <terrain-map>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/terrain-map.nas</file>
+    </terrain-map>
+      
+    <engines>
+      <file>Aircraft/Generic/Engines/generic-yasim-engine.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/engines-yasim.nas</file>
+    </engines>
+
+    <water>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/water.nas</file>
+    </water>
+
+  </nasal>
+
+  <!-- Buck notes: User adjustable payloads -->
+    <weight n="0">
+      <name>Cargo</name>
+      <weight-lb>1800</weight-lb>
+      <max-lb>12000</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+</PropertyList>

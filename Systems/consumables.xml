@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <fuel>
+    <tank n="0">
+      <tank-num type="int">0</tank-num>
+      <level-gal_us archive="y">346.3</level-gal_us>
+    </tank>
+    <tank n="1">
+      <tank-num type="int">1</tank-num>
+      <level-gal_us archive="y">346.3</level-gal_us>
+    </tank>
+    <!-- Auxiliary External Tanks for P-27J ASW -->
+    <tank n="2">
+      <tank-num type="int">2</tank-num>
+      <level-gal_us archive="y"></level-gal_us>
+    </tank>
+    <tank n="3">
+      <tank-num type="int">3</tank-num>
+      <level-gal_us archive="y"></level-gal_us>
+    </tank>
+  </fuel>
+  
+</PropertyList>

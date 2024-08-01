@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Leonardo P-27J ASW</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>e</name>
+    <desc>Open/Close crew door</desc>
+  </key>
+  <key>
+    <name>d</name>
+    <desc>Open/Close para door</desc>
+  </key>
+  <key>
+    <name>E</name>
+    <desc>Open/Close cargo door</desc>
+  </key>
+  <key>
+    <name>L</name>
+    <desc>On/Off Landing light</desc>
+  </key>
+  <key>
+    <name>l</name>
+    <desc>On/Off Taxy light</desc>
+  </key>
+  <key>
+    <name>F</name>
+    <desc>On/Off Beacon light</desc>
+  </key>
+  <key>
+    <name>Ctrl-f</name>
+    <desc>On/Off Position light</desc>
+  </key>
+  <key>
+    <name>W</name>
+    <desc>MAD Boom Retraction</desc>
+  </key>
+  <key>
+    <name>q</name>
+    <desc>Release Flares</desc>
+  </key>
+  <key>
+    <name>S</name>
+    <desc>Sonobuoy Launch</desc>
+  </key>
+  <key>
+    <name>s</name>
+    <desc>SAR Life Raft Launch</desc>
+  </key>
+  <key>
+    <name>U/J/N; I/K/M</name>
+    <desc>MU90 Launch</desc>
+  </key>
+  <key>
+    <name>u/j/n; i/k/m</name>
+    <desc>Marte-ER Launch</desc>
+  </key>
+  <key>
+    <name>Q</name>
+    <desc>Reset View</desc>
+  </key>
+  
+</PropertyList>

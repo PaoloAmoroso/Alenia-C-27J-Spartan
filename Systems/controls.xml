@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <lighting>
+    <instrument-lights type="bool">false</instrument-lights>
+    <nav-lights type="bool">false</nav-lights>
+    <taxi-lights type="bool">false</taxi-lights>
+    <strobe-lights type="bool">false</strobe-lights>
+    <beacon type="bool">false</beacon>
+    <landing-lights type="bool">false</landing-lights>
+    <luminosite-lights type="float">0.8</luminosite-lights>
+    <panel-dim type="float">0.5</panel-dim>
+  </lighting>
+  
+  <cabin-door>
+    <open type="bool">0</open>
+  </cabin-door>
+  
+  <APU>
+    <master type="bool">1</master>
+    <battery type="double">28.0</battery>
+    <running type="bool">1</running>
+    <off-start-run type="int">1</off-start-run>
+  </APU>
+  
+  <electric>
+    <battery-switch>0</battery-switch>
+    <generator>0</generator>
+    <engines>
+      <engine>
+        <fuel-pump>0</fuel-pump>
+      </engine>
+    </engines>
+  </electric>
+  
+  <engines>
+    <engine n="0">
+      <cutoff type="bool">true</cutoff>
+      <throttle-fdm type="double">0.07</throttle-fdm>
+      <magnetos>3</magnetos>
+    </engine>
+    <engine n="1">
+      <cutoff type="bool">true</cutoff>
+      <throttle-fdm type="double">0.07</throttle-fdm>
+      <magnetos>3</magnetos>
+    </engine>
+  </engines>
+  
+  <gear>
+    <brake-parking type="double">1</brake-parking>
+  </gear>
+  
+  <flight>
+    <speedbrake type="double">0</speedbrake>
+    <rudder-trim>   0.00 </rudder-trim>
+    <aileron-trim>  0.00 </aileron-trim>
+    <elevator-trim> - 0.30 </elevator-trim>
+  </flight>
+  
+</PropertyList>

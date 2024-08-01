@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Systems/MC-27J-base.xml">
+
+  <sim>
+    
+    <description>Leonardo MC-27J Praetorian</description>
+    <author>Patrizio MELIS (3D/FDM), Emmanuel BARANGER (FDM), Paolo AMOROSO</author>
+    <aircraft-version>0.3</aircraft-version>
+    <status>Alpha</status>
+    
+    <flight-model>yasim</flight-model>
+    <variant-of>C-27J</variant-of>
+    <aero>Systems/MC-27J-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 3 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+  </sim>
+  <payload>
+    <weight n="0">
+               <name>Mission Payload</name>
+               <weight-lb>1800</weight-lb>
+               <max-lb>12000</max-lb>
+               <min-lb>0</min-lb>
+    </weight>
+    <weight n="1">
+      <name>Pylon 1</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>GBU-12</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+     </weight>	
+	<weight n="2">
+      <name>Pylon 2</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>GBU-12</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+     </weight>
+     <weight n="3">
+      <name>Pylon 3</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>GBU-12</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+     </weight>
+     <weight n="4">
+      <name>Pylon 4</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>GBU-12</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+     </weight>
+	<weight n="5">
+      <name>Pylon 5</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>GBU-12</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+     </weight>
+     <weight n="6">
+      <name>Pylon 6</name>
+            <opt>
+               <name>Empty</name>
+               <lbs>0</lbs>
+               <weight-lb>0</weight-lb>
+            </opt>
+            <opt>
+               <name>GBU-12</name>
+               <lbs>670</lbs>
+               <weight-lb>670</weight-lb>
+            </opt>
+     </weight>
+  </payload>
+
+</PropertyList>

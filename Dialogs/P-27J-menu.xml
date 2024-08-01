@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>P-27J ASW</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/battery-switch</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/engine/generator</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/electric/engine/generator</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/instrument-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/nav-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/strobe-lights</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/beacon</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/switches/starterkey-insert</property>
+        </binding>
+        <!-- Magnetos -->
+        <binding>
+          <condition>
+            <property>controls/switches/starterkey-insert</property>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[0]/magnetos</property>
+          <value>3</value>
+        </binding>
+        <binding>
+          <condition>
+            <property>controls/switches/starterkey-insert</property>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[1]/magnetos</property>
+          <value>3</value>
+        </binding>
+        <binding>
+          <condition>
+            <not>
+              <property>controls/switches/starterkey-insert</property>
+            </not>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[0]/magnetos</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <condition>
+            <not>
+              <property>controls/switches/starterkey-insert</property>
+            </not>
+          </condition>
+          <command>property-assign</command>
+          <property>controls/engines/engine[1]/magnetos</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>engines.autostart();</script>
+        </binding>
+      </item>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Reload Weapons</label>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal1</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal2</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal3</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal4</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal5</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal6</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal7</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal8</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal9</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal10</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal11</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/signal12</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          if (!getprop("gear/gear[0]/wow")) {
+            screen.log.write("This is only possible on ground.");
+            return;
+          }
+          if (getprop("gear/gear[0]/position-norm")) {
+            screen.log.write("Weapons Reloaded.");
+          }
+          </script>
+        </binding>
+      </item>
+    </menu>
+  </default>
+
+</PropertyList>

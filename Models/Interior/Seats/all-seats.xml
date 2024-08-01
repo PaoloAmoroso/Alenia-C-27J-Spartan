@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Pilot seat -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m>  0.87732 </x-m>
+      <y-m> -0.56130 </y-m>
+      <z-m> -0.29525 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Co-pilot seat -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m>  0.87964 </x-m>
+      <y-m>  0.55335 </y-m>
+      <z-m> -0.29525 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

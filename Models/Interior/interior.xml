@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques/Oggetti opachi -->
+    <object-name>Internal</object-name>
+    <object-name>CockpitInt</object-name>
+    <object-name>CockpitFloor</object-name>
+    <object-name>CockpitEnt</object-name>
+    <object-name>BarrelL</object-name>
+    <object-name>BarrelR</object-name>
+    <object-name>BarrelL1</object-name>
+    <object-name>BarrelL1B</object-name>
+    <object-name>BarrelL2</object-name>
+    <object-name>BarrelR1</object-name>
+    <object-name>BarrelR1B</object-name>
+    <object-name>BarrelR2</object-name>
+    
+    <!-- Objets transparents/Oggetti trasparenti -->
+    <object-name>intGlass</object-name>
+  </animation>
+
+  <!-- Working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intGlass</object-name>
+  </effect>
+  
+  <!-- Pilote/Pilota --> 
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -9.87732 </x-m>
+      <y-m> -0.56130 </y-m>
+      <z-m>  3.18525 </z-m>
+    </offsets>
+  </model> 
+  
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -9.87964 </x-m>
+      <y-m>  0.55335 </y-m>
+      <z-m>  3.18525 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Planche de bord/Plancia di comando -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -10.50754 </x-m>
+      <y-m>   0.02333 </y-m>
+      <z-m>   3.32646 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ISR Mission Console -->
+  <model>
+    <path>XAircraft/Alenia-C-27J-Spartan/Models/Interior/Computer/computer.xml</path>
+    <offsets>
+      <x-m> -4.000 </x-m>
+      <y-m>  0.023 </y-m>
+      <z-m>  3.250 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Cloche -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Yoke/yoke.xml</path>
+    <offsets>
+      <x-m> -10.19058 </x-m>
+      <y-m>   0.00000 </y-m>
+      <z-m>   2.59604 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Doors animation/Animazione delle porte
+  <animation>
+    <name>IntPorteGauche</name>
+    <object-name>intporteG</object-name>
+    <object-name>intvitreG</object-name>
+    <object-name>inttourporteG</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteGauche</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -70 </factor>
+    <center>
+      <x-m> -2.57720 </x-m>
+      <y-m> -0.58568 </y-m>
+      <z-m> -0.48420 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>IntPorteDroite</name>
+    <object-name>intporteD</object-name>
+    <object-name>intvitreD</object-name>
+    <object-name>inttourporteD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m> -1.66389 </x-m>
+      <y-m>  0.60889 </y-m>
+      <z-m> -0.42408 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation> -->
+  
+</PropertyList>

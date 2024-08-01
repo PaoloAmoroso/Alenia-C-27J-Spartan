@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques/Oggetti opachi -->
+    <object-name>PanelBase</object-name>
+    <object-name>panel</object-name>
+    <object-name>InstrumentsBase</object-name>
+    <object-name>CompassBox1</object-name>
+    <object-name>CompassBox2</object-name>
+    <object-name>PedalAL</object-name>
+    <object-name>PedalAR</object-name>
+    <object-name>PedalBL</object-name>
+    <object-name>PedalBR</object-name>
+    
+    <!-- Objets transparents/Oggetti trasparenti -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>PanelBase</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <factor-prop>controls/lighting/panel-dim</factor-prop>
+      <red>   0.8 </red>
+      <green> 0.8 </green>
+      <blue>  0.8 </blue>
+    </emission>
+  </animation>
+  
+  <!-- ALL SEATS -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Seats/all-seats.xml</path>
+  </model>
+
+  <!-- SWITCH LIGHTS -->
+  <!-- Landing -->
+  <model>
+    <path>Instruments/Switch/land-lights.xml</path>
+    <offsets>
+      <x-m>  0.053 </x-m>
+      <y-m> -0.040 </y-m>
+      <z-m> -0.300 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Nav -->
+  <model>
+    <path>Instruments/Switch/batt-lights.xml</path>
+    <offsets>
+      <x-m>  0.053 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.300 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Instruments -->
+  <model>
+    <path>Instruments/Switch/instr-lights.xml</path>
+    <offsets>
+      <x-m>  0.053 </x-m>
+      <y-m>  0.040 </y-m>
+      <z-m> -0.300 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- ALL YOKES -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Yoke/all-yokes.xml</path>
+  </model> -->
+
+  <!-- PRIMARY AVIONICS -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/pfd.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.645 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.6 </x-offset>
+        <y-offset> 1.6 </y-offset>
+        <z-offset> 1.6 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/pfd.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.350 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.6 </x-offset>
+        <y-offset> 1.6 </y-offset>
+        <z-offset> 1.6 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/mfd.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.350 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.6 </x-offset>
+        <y-offset> 1.6 </y-offset>
+        <z-offset> 1.6 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/mfd.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.645 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.6 </x-offset>
+        <y-offset> 1.6 </y-offset>
+        <z-offset> 1.6 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/eicas.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.6 </x-offset>
+        <y-offset> 1.6 </y-offset>
+        <z-offset> 1.6 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/cdu/cdu.xml</path>
+    <offsets>
+      <x-m>  0.400 </x-m>
+      <y-m> -0.160 </y-m>
+      <z-m> -0.305 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.0 </x-offset>
+        <y-offset> 1.0 </y-offset>
+        <z-offset> 1.0 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/cdu/cdu.xml</path>
+    <offsets>
+      <x-m>  0.400 </x-m>
+      <y-m>  0.160 </y-m>
+      <z-m> -0.305 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.0 </x-offset>
+        <y-offset> 1.0 </y-offset>
+        <z-offset> 1.0 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- FLAPS, GEAR, THROTTLE, BRAKES -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/Gear/gear.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.180 </y-m>
+      <z-m> -0.010 </z-m>
+    </offsets>
+    </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.400 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.360 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.9 </x-offset>
+        <y-offset> 0.9 </y-offset>
+        <z-offset> 0.9 </z-offset>
+      </animation>
+    </overlay>
+    </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/parkbrake/parkbrake.xml</path>
+    <offsets>
+      <x-m>  0.530 </x-m>
+      <y-m>  0.180 </y-m>
+      <z-m> -0.308 </z-m>
+    </offsets>
+    </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/flaps/flaps.xml</path>
+    <offsets>
+      <x-m>  0.560 </x-m>
+      <y-m>  0.065 </y-m>
+      <z-m> -0.360 </z-m>
+    </offsets>
+    </model>
+
+  <!-- RMU -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/rmu/rmu1.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.450 </y-m>
+      <z-m>  0.235 </z-m>
+    </offsets>
+    </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/rmu/rmu1.xml</path>
+    <offsets>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.450 </y-m>
+      <z-m> 0.235 </z-m>
+    </offsets>
+    </model>
+
+  <!-- WARNING ANNUNCIATORS -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/warning/warning.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.560 </y-m>
+      <z-m>  0.230 </z-m>
+    </offsets>
+    </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/warning/warning.xml</path>
+    <offsets>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.560 </y-m>
+      <z-m> 0.230</z-m>
+    </offsets>
+    </model>
+
+  <!-- SUPPLEMENT INSTRUMENTATION -->
+  <model>
+    <path>XAircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.225 </z-m>
+    </offsets>
+    </model>
+
+  <model>
+    <path>XAircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/chrono/chronometer.xml</path>
+    <offsets>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.225 </z-m>
+    </offsets>
+    </model>
+
+    <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mag-compass/mag-compass.xml</path>
+    <offsets>
+      <x-m>  0.135 </x-m>
+      <y-m> -0.012 </y-m>
+      <z-m>  0.514 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.5 </x-offset>
+        <y-offset> 1.5 </y-offset>
+        <z-offset> 1.5 </z-offset>
+      </animation>
+    </overlay>
+    </model>
+
+    <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/Screen/cad.xml</path>
+    <offsets>
+      <x-m>  0.180 </x-m>
+      <y-m> -0.160 </y-m>
+      <z-m> -0.300 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+    </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/Screen/cad.xml</path>
+    <offsets>
+      <x-m>  0.180 </x-m>
+      <y-m>  0.160 </y-m>
+      <z-m> -0.300 </z-m>
+      <pitch-deg> -90 </pitch-deg>
+    </offsets>
+    </model>
+
+  <!-- NAVIGATION PANELS -->
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/Panel1/panel1.xml</path>
+    <offsets>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.230 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.3 </x-offset>
+        <y-offset> 1.3 </y-offset>
+        <z-offset> 1.3 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/Panel2/panel2.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.310 </y-m>
+      <z-m>  0.230 </z-m>
+    </offsets>
+    </model>
+
+  <model>
+    <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/Panel2/panel2.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m>  0.310 </y-m>
+      <z-m>  0.230 </z-m>
+    </offsets>
+    </model>
+
+  <model>
+    <path>XAircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/Panel5/panel5.xml</path>
+    <offsets>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.215 </y-m>
+      <z-m>  0.300 </z-m>
+    </offsets>
+    </model>
+  
+</PropertyList>

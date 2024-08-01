@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>speedbrake.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>base</object-name>
+    <object-name>speedbrake</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>speedbrake</object-name>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/flight/spoilers</property>
+        <factor> -0.1 </factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>speedbrake</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <factor> 0.07 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">MC-27J, Dark</name>
+        <texture>Liveries/Dark.png</texture>
+        <specular>
+          <red>   0.0 </red>
+          <green> 0.0 </green>
+          <blue>  0.0 </blue>
+        </specular>
+      </livery>
+      <c27j>
+        <SensorA type="bool">true</SensorA>
+        <SensorB type="bool">true</SensorB>
+      </c27j>
+    </model>
+    
+  </sim>
+  
+</PropertyList>

@@ -242,7 +242,6 @@
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/system.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/dialog.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Radar.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/mad.nas</file>
     </C27J>
 
     <radar>

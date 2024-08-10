@@ -174,8 +174,8 @@
       </binding>
     </key>
 
-  <key n="102">
-      <name>f</name>
+  <key n="114">
+      <name>r</name>
       <desc>MAD Boom</desc>
       <binding>
         <command>nasal</command>

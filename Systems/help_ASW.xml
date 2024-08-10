@@ -25,15 +25,19 @@
     <desc>On/Off Taxy light</desc>
   </key>
   <key>
-    <name>F</name>
-    <desc>On/Off Beacon light</desc>
+    <name>f</name>
+    <desc>On/Off Beacon lights</desc>
   </key>
   <key>
     <name>Ctrl-f</name>
-    <desc>On/Off Position light</desc>
+    <desc>On/Off Navigation lights</desc>
   </key>
   <key>
-    <name>W</name>
+    <name>F</name>
+    <desc>On/Off Strobes lights</desc>
+  </key>
+  <key>
+    <name>r</name>
     <desc>MAD Boom Retraction</desc>
   </key>
   <key>

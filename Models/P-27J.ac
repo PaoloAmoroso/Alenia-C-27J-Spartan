@@ -10,10 +10,10 @@ MATERIAL "DefaultWhite.016" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0
 MATERIAL "Transp1.002" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.846
 MATERIAL "Transp.005" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 1.000 1.000 1.000  shi 64 trans 0.793
 OBJECT world
-name "Blender_exporter_v3.3__P-27J ASW.ac"
+name "Blender_exporter_v3.3__P-27J.ac"
 kids 96
 OBJECT poly
-name "AleroneL.002"
+name "AleroneL"
 data 12
 AleroneL.002
 crease 179.0

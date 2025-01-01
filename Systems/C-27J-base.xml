@@ -99,6 +99,17 @@
   <instrumentation include="Systems/instruments.xml"/>
   
   <engines include="Systems/engines.xml"/>
+
+    <systems>
+    <refuel>
+	 <type>probe</type>
+	 <serviceable type="bool">true</serviceable>
+      <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+      <offset-x-m>0</offset-x-m>
+      <offset-y-m>0</offset-y-m>
+      <offset-z-m>0</offset-z-m>
+    </refuel>  
+  </systems>
    
   <nasal>
     <doors>
@@ -124,6 +135,10 @@
     <terrain-map>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/terrain-map.nas</file>
     </terrain-map>
+
+    <aar>
+	    <file>Aircraft/Generic/aar.nas</file>
+    </aar>
       
     <engines>
       <file>Aircraft/Generic/Engines/generic-yasim-engine.nas</file>

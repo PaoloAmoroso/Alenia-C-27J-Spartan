@@ -1289,41 +1289,27 @@
       <repeatable>false</repeatable>
       <binding>
         <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
+        <script>doors.passengerL.toggle();</script>
       </binding>
     </action>
   </animation>
-  
+    
   <animation>
     <type>rotate</type>
     <object-name>DoorLR</object-name>
-    <visible>true</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>DoorLR</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
-    <factor> -30 </factor>
+    <property>sim/model/door-positions/passengerL/position-norm</property>
+    <factor> -45 </factor>
     <center>
-      <x-m>  96.000 </x-m>
-      <y-m>   1.000 </y-m>
-      <z-m>   1.400 </z-m>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 2.813 </z-m>
     </center>
     <axis>
       <x> 1 </x>
       <y> 0 </y>
       <z> 0 </z>
     </axis>
-  </animation> -->
+  </animation>
 
   <!-- Parachuters Door Right -->
   <animation>
@@ -1340,7 +1326,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
+        <script>doors.passengerR.toggle();</script>
       </binding>
     </action>
   </animation>
@@ -1348,34 +1334,20 @@
   <animation>
     <type>rotate</type>
     <object-name>DoorRR</object-name>
-    <visible>true</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>Xdoors.passenger.toggle();</script>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
-    <type>rotate</type>
-    <object-name>DoorRR</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
-    <factor> 30 </factor>
+    <property>sim/model/door-positions/passengerR/position-norm</property>
+    <factor> 45 </factor>
     <center>
-      <x-m> -96.000 </x-m>
-      <y-m>  -1.000 </y-m>
-      <z-m>   1.400 </z-m>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 2.813 </z-m>
     </center>
     <axis>
       <x> 1 </x>
       <y> 0 </y>
       <z> 0 </z>
     </axis>
-  </animation> -->
-
+  </animation>
+  
   <!-- Cargo Doors -->
   <animation>
     <type>pick</type>

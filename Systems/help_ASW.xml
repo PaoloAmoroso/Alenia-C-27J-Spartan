@@ -6,15 +6,19 @@
   <line>______________________________________________</line>
   <key>
     <name>e</name>
-    <desc>Open/Close crew door</desc>
-  </key>
-  <key>
-    <name>d</name>
-    <desc>Open/Close para door</desc>
+    <desc>Open/Close Crew Door</desc>
   </key>
   <key>
     <name>E</name>
-    <desc>Open/Close cargo door</desc>
+    <desc>Open/Close Cargo Ramp</desc>
+  </key>
+  <key>
+    <name>d</name>
+    <desc>Open/Close Observer Door Left</desc>
+  </key>
+  <key>
+    <name>D</name>
+    <desc>Open/Close Observer Door Right</desc>
   </key>
   <key>
     <name>L</name>

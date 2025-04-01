@@ -38,7 +38,7 @@
       <desc>Para Door Left</desc>
       <binding>
         <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
+        <script>doors.passengerL.toggle();</script>
       </binding>
     </key>
 
@@ -47,7 +47,7 @@
       <desc>Para Door Right</desc>
       <binding>
         <command>nasal</command>
-        <script>doors.passenger.toggle();</script>
+        <script>doors.passengerR.toggle();</script>
       </binding>
     </key>
 

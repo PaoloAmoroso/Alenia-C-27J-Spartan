@@ -187,7 +187,7 @@
     </speed-prop>
     <repeat>true</repeat>
     <delay>1.00</delay>
-    <count>60</count>
+    <count>-1</count>
     <x-offset> -7.3648 </x-offset>
     <y-offset>  0.0000 </y-offset>
     <z-offset>  5.7018 </z-offset>
@@ -210,7 +210,7 @@
 
   <!-- P-27J ASW SAR Life Raft Release -->
   <submodel>
-    <name>Sonobuoy</name>
+    <name>SAR</name>
     <model>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Weapons/SAR/SAR_Raft.xml</model>
     <trigger>controls/armament/SAR-release</trigger>
     <speed-prop>
@@ -236,6 +236,29 @@
     <impact>true</impact>
     <impact-reports>ai/models/model-impact</impact-reports>
     <submodel-path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Weapons/SAR/SAR_Operation.xml</submodel-path>
+  </submodel>
+
+  <!-- P-27J ASW SAR Smokebuoy Release -->
+  <submodel>
+    <model>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Weapons/SAR/Smokebuoy/Smokebuoy.xml</model>
+    <trigger>/controls/armament/smokebuoy-release</trigger>
+    <speed-prop>
+      <property>/velocities/airspeed-kt</property>
+    </speed-prop>
+    <repeat>false</repeat>
+    <delay>0.2</delay>
+    <count>-1</count>
+    <life>1000</life>
+    <wind>false</wind>
+    <weight>500</weight>
+    <cd>0.295</cd>
+    <eda>0.61629</eda>
+    <fuse-range>2.2</fuse-range>
+    <aero-stabilised>true</aero-stabilised>
+    <collision>true</collision>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+    <submodel-path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Weapons/SAR/Smokebuoy/buoy-impact.xml</submodel-path>
   </submodel>
 
   <!-- WASS MU90 Impact Torpedo Launch -->

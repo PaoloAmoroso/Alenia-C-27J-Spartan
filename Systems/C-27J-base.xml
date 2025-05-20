@@ -100,7 +100,7 @@
   
   <engines include="Systems/engines.xml"/>
 
-    <systems>
+  <systems>
     <refuel>
 	 <type>probe</type>
 	 <serviceable type="bool">true</serviceable>
@@ -121,7 +121,6 @@
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Electrical.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Systems.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/cdu.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/immat.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/map.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/nd.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/convert.nas</file>
@@ -132,12 +131,13 @@
     <radar>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radar.nas</file>
     </radar>
+
     <terrain-map>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/terrain-map.nas</file>
     </terrain-map>
 
     <aar>
-	    <file>Aircraft/Generic/aar.nas</file>
+	 <file>Aircraft/Generic/aar.nas</file>
     </aar>
       
     <engines>

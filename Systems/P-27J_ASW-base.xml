@@ -245,7 +245,6 @@
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Electrical.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Systems.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/cdu.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/immat.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/map.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/nd.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/convert.nas</file>
@@ -263,7 +262,7 @@
     </terrain-map>
 
     <aar>
-      <file>Aircraft/Generic/aar.nas</file>
+	 <file>Aircraft/Generic/aar.nas</file>
     </aar>
       
     <engines>

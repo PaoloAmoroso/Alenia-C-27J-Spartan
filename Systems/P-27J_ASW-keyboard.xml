@@ -235,6 +235,23 @@
 	   </mod-up>
     </key>
 
+    <key n="19">
+      <name>Ctrl+s</name>
+      <desc>Smokebuoy release</desc>
+      <binding>
+       <command>property-assign</command>
+	  <property>/controls/armament/smokebuoy-release</property>
+      <value>1</value>
+      </binding>
+        <mod-up>
+      <binding>
+	  <command>property-assign</command>
+        <property>/controls/armament/smokebuoy-release</property>
+	 <value>0</value>
+	 </binding>
+	   </mod-up>
+    </key>
+
     <key n="115">
       <name>s</name>
       <desc>SAR Raft release</desc>

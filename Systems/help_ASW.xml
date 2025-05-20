@@ -57,6 +57,10 @@
     <desc>SAR Life Raft Launch</desc>
   </key>
   <key>
+    <name>Ctrl+s</name>
+    <desc>Smokebuoy Launch</desc>
+  </key>
+  <key>
     <name>U/J/N; I/K/M</name>
     <desc>MU90 Launch</desc>
   </key>

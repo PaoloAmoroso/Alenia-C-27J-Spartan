@@ -30,19 +30,21 @@
   <animation>
     <!-- Object list -->
     <object-name>Fusoliera</object-name>
+    <object-name>FusoEstesa</object-name>
     <object-name>FusoVanoRuote</object-name>
+    <object-name>SixBladesL</object-name>
+    <object-name>SixBladesR</object-name>
+    <object-name>NacelleL</object-name>
+    <object-name>NacelleR</object-name>
+    <object-name>NacelleExtL</object-name>
+    <object-name>NacelleExtR</object-name>
     <object-name>NacelleDoorL</object-name>
     <object-name>NacelleDoorL1</object-name>
     <object-name>NacelleDoorR</object-name>
     <object-name>NacelleDoorR1</object-name>
     <object-name>StabilizzatoreVerticale</object-name>
-    <object-name>FusoEstesa</object-name>
     <object-name>Timone</object-name>
     <object-name>Ali</object-name>
-    <object-name>NacelleL</object-name>
-    <object-name>NacelleR</object-name>
-    <object-name>NacelleExtL</object-name>
-    <object-name>NacelleExtR</object-name>
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
@@ -53,20 +55,20 @@
     <object-name>FrontGearL2</object-name>
     <object-name>FrontGearR1</object-name>
     <object-name>FrontGearR2</object-name>
-    <object-name>LightTailBase</object-name>
     <object-name>AleroneL</object-name>
     <object-name>AleroneR</object-name>
-    <object-name>FlapPartL</object-name>
-    <object-name>FlapL</object-name>
-    <object-name>FlapPartR</object-name>
-    <object-name>FlapR</object-name>
     <object-name>Flap</object-name>
+    <object-name>FlapL</object-name>
+    <object-name>FlapPartL</object-name>
+    <object-name>FlapR</object-name>
+    <object-name>FlapPartR</object-name>
     <object-name>SpoilerL</object-name>
     <object-name>SpoilerR</object-name>
     <object-name>StabilizzatoreOrizzontale</object-name>
     <object-name>ElevoneL</object-name>
     <object-name>ElevoneR</object-name>
     <object-name>Antenna</object-name>
+    <object-name>Sensor</object-name>
     <object-name>Sensor</object-name>
     <object-name>Sensor1</object-name>
     <object-name>Sensor2</object-name>
@@ -75,10 +77,9 @@
     <object-name>Sensor5</object-name>
     <object-name>PosLamp</object-name>
     <object-name>BottomLight</object-name>
+    <object-name>LightTailBase</object-name>
     <object-name>BolL</object-name>
     <object-name>BolR</object-name>
-    <object-name>SixBladesL</object-name>
-    <object-name>SixBladesR</object-name>
     <object-name>GearF1</object-name>
     <object-name>GearF2</object-name>
     <object-name>GearF3</object-name>
@@ -104,10 +105,14 @@
     <object-name>GearR2-2</object-name>
     <object-name>RuotaR2</object-name>
     <object-name>WindshieldWiperL</object-name>
-    <object-name>WindshieldWiperR</object-name>
+    <object-name>Windshield-Wiper-R</object-name>
+
     <object-name>NextGeneration</object-name>
+    <object-name>turretbase</object-name>
+    <object-name>turretball</object-name>
     <object-name>JEDI</object-name>
     <object-name>Racks</object-name>
+    <object-name>Seaspray</object-name>
     <object-name>SATCOM</object-name>
     <object-name>MAD</object-name>
     <object-name>COMINT</object-name>
@@ -115,7 +120,8 @@
     <object-name>UHF_Antenna</object-name>
 
     <!-- Trasparent Objects -->
-    <object-name>Glass</object-name>
+    <object-name>Glassaa</object-name>
+    <object-name>FLIRvitre</object-name>
     <object-name>BulbLightsRear</object-name>
     <object-name>LightRed</object-name>
     <object-name>LightGreen</object-name>
@@ -129,42 +135,45 @@
   <animation>
     <type>material</type>
     <object-name>Fusoliera</object-name>
+    <object-name>FusoEstesa</object-name>
     <object-name>FusoVanoRuote</object-name>
+    <object-name>SixBladesL</object-name>
+    <object-name>SixBladesR</object-name>
+    <object-name>NacelleL</object-name>
+    <object-name>NacelleR</object-name>
+    <object-name>NacelleExtL</object-name>
+    <object-name>NacelleExtR</object-name>
     <object-name>NacelleDoorL</object-name>
     <object-name>NacelleDoorL1</object-name>
     <object-name>NacelleDoorR</object-name>
     <object-name>NacelleDoorR1</object-name>
     <object-name>StabilizzatoreVerticale</object-name>
-    <object-name>FusoEstesa</object-name>
     <object-name>Timone</object-name>
     <object-name>Ali</object-name>
-    <object-name>NacelleL</object-name>
-    <object-name>NacelleR</object-name>
-    <object-name>NacelleExtL</object-name>
-    <object-name>NacelleExtR</object-name>
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
     <object-name>Hatchback1A</object-name>
+    <object-name>Hatchback2A</object-name>
     <object-name>Hatchback3A</object-name>
     <object-name>FrontGearL1</object-name>
     <object-name>FrontGearL2</object-name>
     <object-name>FrontGearR1</object-name>
     <object-name>FrontGearR2</object-name>
-    <object-name>LightTailBase</object-name>
     <object-name>AleroneL</object-name>
     <object-name>AleroneR</object-name>
-    <object-name>FlapPartL</object-name>
-    <object-name>FlapL</object-name>
-    <object-name>FlapPartR</object-name>
-    <object-name>FlapR</object-name>
     <object-name>Flap</object-name>
+    <object-name>FlapL</object-name>
+    <object-name>FlapPartL</object-name>
+    <object-name>FlapR</object-name>
+    <object-name>FlapPartR</object-name>
     <object-name>SpoilerL</object-name>
     <object-name>SpoilerR</object-name>
     <object-name>StabilizzatoreOrizzontale</object-name>
     <object-name>ElevoneL</object-name>
     <object-name>ElevoneR</object-name>
     <object-name>Antenna</object-name>
+    <object-name>Sensor</object-name>
     <object-name>Sensor</object-name>
     <object-name>Sensor1</object-name>
     <object-name>Sensor2</object-name>
@@ -173,10 +182,9 @@
     <object-name>Sensor5</object-name>
     <object-name>PosLamp</object-name>
     <object-name>BottomLight</object-name>
+    <object-name>LightTailBase</object-name>
     <object-name>BolL</object-name>
     <object-name>BolR</object-name>
-    <object-name>SixBladesL</object-name>
-    <object-name>SixBladesR</object-name>
     <object-name>GearF1</object-name>
     <object-name>GearF2</object-name>
     <object-name>GearF3</object-name>
@@ -202,10 +210,14 @@
     <object-name>GearR2-2</object-name>
     <object-name>RuotaR2</object-name>
     <object-name>WindshieldWiperL</object-name>
-    <object-name>WindshieldWiperR</object-name>
+    <object-name>Windshield-Wiper-R</object-name>
+
     <object-name>NextGeneration</object-name>
+    <object-name>turretbase</object-name>
+    <object-name>turretball</object-name>
     <object-name>JEDI</object-name>
     <object-name>Racks</object-name>
+    <object-name>Seaspray</object-name>
     <object-name>SATCOM</object-name>
     <object-name>MAD</object-name>
     <object-name>COMINT</object-name>
@@ -225,44 +237,47 @@
   <!-- ********************* Effects ********************** -->
 
   <effect>
-    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <inherits-from>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Bump/bumpspec</inherits-from>
     <object-name>Fusoliera</object-name>
+    <object-name>FusoEstesa</object-name>
     <object-name>FusoVanoRuote</object-name>
+    <object-name>SixBladesL</object-name>
+    <object-name>SixBladesR</object-name>
+    <object-name>NacelleL</object-name>
+    <object-name>NacelleR</object-name>
+    <object-name>NacelleExtL</object-name>
+    <object-name>NacelleExtR</object-name>
     <object-name>NacelleDoorL</object-name>
     <object-name>NacelleDoorL1</object-name>
     <object-name>NacelleDoorR</object-name>
     <object-name>NacelleDoorR1</object-name>
     <object-name>StabilizzatoreVerticale</object-name>
-    <object-name>FusoEstesa</object-name>
     <object-name>Timone</object-name>
     <object-name>Ali</object-name>
-    <object-name>NacelleL</object-name>
-    <object-name>NacelleR</object-name>
-    <object-name>NacelleExtL</object-name>
-    <object-name>NacelleExtR</object-name>
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
     <object-name>Hatchback1A</object-name>
+    <object-name>Hatchback2A</object-name>
     <object-name>Hatchback3A</object-name>
     <object-name>FrontGearL1</object-name>
     <object-name>FrontGearL2</object-name>
     <object-name>FrontGearR1</object-name>
     <object-name>FrontGearR2</object-name>
-    <object-name>LightTailBase</object-name>
     <object-name>AleroneL</object-name>
     <object-name>AleroneR</object-name>
-    <object-name>FlapPartL</object-name>
-    <object-name>FlapL</object-name>
-    <object-name>FlapPartR</object-name>
-    <object-name>FlapR</object-name>
     <object-name>Flap</object-name>
+    <object-name>FlapL</object-name>
+    <object-name>FlapPartL</object-name>
+    <object-name>FlapR</object-name>
+    <object-name>FlapPartR</object-name>
     <object-name>SpoilerL</object-name>
     <object-name>SpoilerR</object-name>
     <object-name>StabilizzatoreOrizzontale</object-name>
     <object-name>ElevoneL</object-name>
     <object-name>ElevoneR</object-name>
     <object-name>Antenna</object-name>
+    <object-name>Sensor</object-name>
     <object-name>Sensor</object-name>
     <object-name>Sensor1</object-name>
     <object-name>Sensor2</object-name>
@@ -271,11 +286,42 @@
     <object-name>Sensor5</object-name>
     <object-name>PosLamp</object-name>
     <object-name>BottomLight</object-name>
+    <object-name>LightTailBase</object-name>
     <object-name>BolL</object-name>
     <object-name>BolR</object-name>
+    <object-name>GearF1</object-name>
+    <object-name>GearF2</object-name>
+    <object-name>GearF3</object-name>
+    <object-name>GearF4</object-name>
+    <object-name>GearF5</object-name>
+    <object-name>GearF6</object-name>
+    <object-name>GearF7</object-name>
+    <object-name>GearF8</object-name>
+    <object-name>GearF9</object-name>
+    <object-name>LightFGear</object-name>
+    <object-name>LightFSupport</object-name>
+    <object-name>RuotaF</object-name>
+    <object-name>GearL1-1</object-name>
+    <object-name>GearL1-2</object-name>
+    <object-name>RuotaL1</object-name>
+    <object-name>GearL2-1</object-name>
+    <object-name>GearL2-2</object-name>
+    <object-name>RuotaL2</object-name>
+    <object-name>GearR1-1</object-name>
+    <object-name>GearR1-2</object-name>
+    <object-name>RuotaR1</object-name>
+    <object-name>GearR2-1</object-name>
+    <object-name>GearR2-2</object-name>
+    <object-name>RuotaR2</object-name>
+    <object-name>WindshieldWiperL</object-name>
+    <object-name>Windshield-Wiper-R</object-name>
+
     <object-name>NextGeneration</object-name>
+    <object-name>turretbase</object-name>
+    <object-name>turretball</object-name>
     <object-name>JEDI</object-name>
     <object-name>Racks</object-name>
+    <object-name>Seaspray</object-name>
     <object-name>SATCOM</object-name>
     <object-name>MAD</object-name>
     <object-name>COMINT</object-name>
@@ -283,19 +329,12 @@
     <object-name>UHF_Antenna</object-name>
   </effect>
 
-  <!-- Rembrandt -->
+  <!-- Rembrandt/HDR -->
   <effect>
-    <inherits-from>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Glass/glass</inherits-from>
-    <object-name>Glass</object-name>
-    <object-name>BulbLightsRear</object-name>
-    <object-name>LightRed</object-name>
-    <object-name>LightGreen</object-name>
-    <object-name>LightTailLamp</object-name>
-  </effect>
-  
-  <effect>
+    <!-- <inherits-from>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Glass/glass</inherits-from> -->
     <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>Glass</object-name>
+    <object-name>Glassaa</object-name>
+    <object-name>FLIRvitre</object-name>
     <object-name>BulbLightsRear</object-name>
     <object-name>LightRed</object-name>
     <object-name>LightGreen</object-name>

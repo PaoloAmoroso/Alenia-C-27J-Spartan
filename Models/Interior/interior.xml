@@ -23,9 +23,9 @@
     <object-name>intGlass</object-name>
   </animation>
 
-  <!-- Working for Rembrandt -->
+  <!-- Rembrandt/HDR -->
   <effect>
-    <inherits-from>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>intGlass</object-name>
   </effect>
   
@@ -57,16 +57,6 @@
       <z-m>   3.32646 </z-m>
     </offsets>
   </model>
-
-  <!-- ISR Mission Console -->
-  <model>
-    <path>XAircraft/Alenia-C-27J-Spartan/Models/Interior/Computer/computer.xml</path>
-    <offsets>
-      <x-m> -4.000 </x-m>
-      <y-m>  0.023 </y-m>
-      <z-m>  3.250 </z-m>
-    </offsets>
-  </model>
   
   <!-- Cloche -->
   <model>
@@ -78,7 +68,46 @@
     </offsets>
   </model>
 
-  <!-- Doors animation/Animazione delle porte
+  <!-- Doors animation/Animazione delle porte -->
+
+  <!-- Cargo Doors -->
+  <animation>
+    <type>pick</type>
+    <object-name>BarrelL1</object-name>
+    <object-name>BarrelL1B</object-name>
+    <object-name>BarrelL2</object-name>
+    <object-name>BarrelR1</object-name>
+    <object-name>BarrelR1B</object-name>
+    <object-name>BarrelR2</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.cargo.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- <animation>
+    <type>rotate</type>
+    <object-name>BarrelL2</object-name>
+    <object-name>BarrelR2</object-name>
+    <property>sim/model/door-positions/cargo/position-norm</property>
+    <factor> 50 </factor>
+    <center>
+      <x-m>  1.300 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  1.400 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
   <animation>
     <name>IntPorteGauche</name>
     <object-name>intporteG</object-name>

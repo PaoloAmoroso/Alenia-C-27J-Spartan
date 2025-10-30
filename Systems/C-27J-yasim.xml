@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!--  Alenia C-27J-Spartan - 2015 Patrizio Melis - Emmanuel BARANGER
+<!--  Alenia C-27J-Spartan - 2015 Patrizio Melis - Emmanuel BARANGER - 2025 Paolo AMOROSO
 
       Source         : http://en.wikipedia.org/wiki/Alenia_C-27J_Spartan
 
@@ -33,10 +33,10 @@
 
   <cruise speed="315" alt="15000" fuel="0.5">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.6"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.9"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.6"/>
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.9"/>
     <control-setting axis="/controls/flight/flaps" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
@@ -155,7 +155,7 @@
                              n2-low-idle="32"
                              n2-high-idle="65"
                              n2-max="100"
-                             bsfc="0.65"> 
+                             bsfc="0.45"> 
                              <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
@@ -185,7 +185,7 @@
                              n2-low-idle="32"
                              n2-high-idle="65"
                              n2-max="100"
-                             bsfc="0.65"> 
+                             bsfc="0.45"> 
                              <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>

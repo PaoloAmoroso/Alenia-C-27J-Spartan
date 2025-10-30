@@ -48,6 +48,8 @@
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
+    <object-name>DoorObserverLR</object-name>
+    <object-name>DoorObserverRR</object-name>
     <object-name>Hatchback1A</object-name>
     <object-name>Hatchback2A</object-name>
     <object-name>Hatchback3A</object-name>
@@ -121,6 +123,8 @@
 
     <!-- Trasparent Objects -->
     <object-name>Glassaa</object-name>
+    <object-name>DoorObserverLRGlass</object-name>
+    <object-name>DoorObserverRRGlass</object-name>
     <object-name>FLIRvitre</object-name>
     <object-name>BulbLightsRear</object-name>
     <object-name>LightRed</object-name>
@@ -153,6 +157,8 @@
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
+    <object-name>DoorObserverLR</object-name>
+    <object-name>DoorObserverRR</object-name>
     <object-name>Hatchback1A</object-name>
     <object-name>Hatchback2A</object-name>
     <object-name>Hatchback3A</object-name>
@@ -257,6 +263,8 @@
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
+    <object-name>DoorObserverLR</object-name>
+    <object-name>DoorObserverRR</object-name>
     <object-name>Hatchback1A</object-name>
     <object-name>Hatchback2A</object-name>
     <object-name>Hatchback3A</object-name>
@@ -334,6 +342,8 @@
     <!-- <inherits-from>Aircraft/Alenia-C-27J-Spartan/Models/Effects/Glass/glass</inherits-from> -->
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Glassaa</object-name>
+    <object-name>DoorObserverLRGlass</object-name>
+    <object-name>DoorObserverRRGlass</object-name>
     <object-name>FLIRvitre</object-name>
     <object-name>BulbLightsRear</object-name>
     <object-name>LightRed</object-name>
@@ -359,6 +369,27 @@
   <model>
     <path>Aircraft/Alenia-C-27J-Spartan/Models/Interior/interior.xml</path>
   </model>
+
+  <!-- Observer Doors -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <property>sim/model/show-observer</property>
+    </condition>
+    <object-name>DoorObserverLR</object-name>
+    <object-name>DoorObserverRR</object-name>
+    <object-name>DoorObserverLRGlass</object-name>
+    <object-name>DoorObserverRRGlass</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <not><property>sim/model/show-observer</property></not>
+    </condition>
+    <object-name>DoorLR</object-name>
+    <object-name>DoorRR</object-name>
+  </animation>
 
   <!-- Particels -->
   <!-- Cranking effects 
@@ -1317,11 +1348,15 @@
   <animation>
     <name>Porta ParaL</name>
     <object-name>DoorLR</object-name>
+    <object-name>DoorObserverLR</object-name>
+    <object-name>DoorObserverLRGlass</object-name>
   </animation>
 
   <animation>
     <type>pick</type>
     <object-name>DoorLR</object-name>
+    <object-name>DoorObserverLR</object-name>
+    <object-name>DoorObserverLRGlass</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
@@ -1336,6 +1371,8 @@
   <animation>
     <type>rotate</type>
     <object-name>DoorLR</object-name>
+    <object-name>DoorObserverLR</object-name>
+    <object-name>DoorObserverLRGlass</object-name>
     <property>sim/model/door-positions/passengerL/position-norm</property>
     <factor> -45 </factor>
     <center>
@@ -1354,11 +1391,15 @@
   <animation>
     <name>Porta ParaR</name>
     <object-name>DoorRR</object-name>
+    <object-name>DoorObserverRR</object-name>
+    <object-name>DoorObserverRRGlass</object-name>
   </animation>
 
   <animation>
     <type>pick</type>
     <object-name>DoorRR</object-name>
+    <object-name>DoorObserverRR</object-name>
+    <object-name>DoorObserverRRGlass</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
@@ -1373,6 +1414,8 @@
   <animation>
     <type>rotate</type>
     <object-name>DoorRR</object-name>
+    <object-name>DoorObserverRR</object-name>
+    <object-name>DoorObserverRRGlass</object-name>
     <property>sim/model/door-positions/passengerR/position-norm</property>
     <factor> 45 </factor>
     <center>

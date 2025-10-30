@@ -90,6 +90,13 @@
         </binding>
       </item>
       <item>
+        <label>Observer Door</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/show-observer</property>
+        </binding>
+      </item>
+      <item>
         <label>Reload Weapons</label>
         <binding>
           <command>property-assign</command>

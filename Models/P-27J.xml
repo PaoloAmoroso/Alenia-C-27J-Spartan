@@ -380,6 +380,10 @@
     <object-name>DoorObserverRR</object-name>
     <object-name>DoorObserverLRGlass</object-name>
     <object-name>DoorObserverRRGlass</object-name>
+    <object-name>DoorObserverLRGlass</object-name>
+    <object-name>DoorObserverRRGlass</object-name>
+    <object-name>Observer_Seat-L</object-name>
+    <object-name>Observer_Seat-R</object-name>
   </animation>
 
   <animation>
@@ -1374,7 +1378,7 @@
     <object-name>DoorObserverLR</object-name>
     <object-name>DoorObserverLRGlass</object-name>
     <property>sim/model/door-positions/passengerL/position-norm</property>
-    <factor> -45 </factor>
+    <factor> -63 </factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>
@@ -1417,7 +1421,7 @@
     <object-name>DoorObserverRR</object-name>
     <object-name>DoorObserverRRGlass</object-name>
     <property>sim/model/door-positions/passengerR/position-norm</property>
-    <factor> 45 </factor>
+    <factor> 63 </factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m> 0.000 </y-m>
@@ -1806,7 +1810,7 @@
     <type>select</type>
     <object-name>Racks</object-name>
     <condition>
-      <!-- <property>sim/model/show-Racks</property> -->
+      <property>sim/model/hide-Racks</property>
     </condition>
   </animation>
 
@@ -2001,6 +2005,21 @@
     </condition>
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>MU90-1</object-name>
+    <object-name>MU90-2</object-name>
+    <object-name>MU90-3</object-name>
+    <object-name>MU90-4</object-name>
+    <object-name>MU90-5</object-name>
+    <object-name>MU90-6</object-name>
+    <condition>
+        <and>
+         <property>sim/model/hide-Racks</property>
+        </and>
+    </condition>
+  </animation>
+
     <!-- Missile: MBDA Marte ER -->
   <model>
     <name>Marte-1</name>
@@ -2176,6 +2195,21 @@
     </condition>
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>Marte-1</object-name>
+    <object-name>Marte-2</object-name>
+    <object-name>Marte-3</object-name>
+    <object-name>Marte-4</object-name>
+    <object-name>Marte-5</object-name>
+    <object-name>Marte-6</object-name>
+    <condition>
+        <and>
+         <property>sim/model/hide-Racks</property>
+        </and>
+    </condition>
+  </animation>
+
   <!-- External Tank: 1000 Kg -->
   <model>
     <name>Tank-1</name>
@@ -2216,6 +2250,17 @@
          <property>sim/weight[4]/selected</property>
            <value>Tank 1000 Kg</value>
        </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Tank-1</object-name>
+    <object-name>Tank-2</object-name>
+    <condition>
+        <and>
+         <property>sim/model/hide-Racks</property>
+        </and>
     </condition>
   </animation>
 

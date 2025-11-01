@@ -97,6 +97,13 @@
         </binding>
       </item>
       <item>
+        <label>Weapons Racks</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/hide-Racks</property>
+        </binding>
+      </item>
+      <item>
         <label>Reload Weapons</label>
         <binding>
           <command>property-assign</command>

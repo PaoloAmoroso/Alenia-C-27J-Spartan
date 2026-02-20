@@ -48,6 +48,7 @@
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
+    <object-name>DoorRH</object-name>
     <object-name>DoorObserverLR</object-name>
     <object-name>DoorObserverRR</object-name>
     <object-name>Hatchback1A</object-name>
@@ -77,9 +78,8 @@
     <object-name>Sensor3</object-name>
     <object-name>Sensor4</object-name>
     <object-name>Sensor5</object-name>
-    <object-name>PosLamp</object-name>
-    <object-name>BottomLight</object-name>
-    <object-name>LightTailBase</object-name>
+    <object-name>Sensor6</object-name>
+    <object-name>LightBase</object-name>
     <object-name>BolL</object-name>
     <object-name>BolR</object-name>
     <object-name>GearF1</object-name>
@@ -107,7 +107,7 @@
     <object-name>GearR2-2</object-name>
     <object-name>RuotaR2</object-name>
     <object-name>WindshieldWiperL</object-name>
-    <object-name>Windshield-Wiper-R</object-name>
+    <object-name>WindshieldWiperR</object-name>
 
     <object-name>NextGeneration</object-name>
     <object-name>turretbase</object-name>
@@ -126,10 +126,9 @@
     <object-name>DoorObserverLRGlass</object-name>
     <object-name>DoorObserverRRGlass</object-name>
     <object-name>FLIRvitre</object-name>
-    <object-name>BulbLightsRear</object-name>
     <object-name>LightRed</object-name>
     <object-name>LightGreen</object-name>
-    <object-name>LightTailLamp</object-name>
+    <object-name>LightLenses</object-name>
     <object-name>propdiscL</object-name>
     <object-name>propblurL</object-name>
     <object-name>propdiscR</object-name>
@@ -157,6 +156,7 @@
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
+    <object-name>DoorRH</object-name>
     <object-name>DoorObserverLR</object-name>
     <object-name>DoorObserverRR</object-name>
     <object-name>Hatchback1A</object-name>
@@ -186,9 +186,8 @@
     <object-name>Sensor3</object-name>
     <object-name>Sensor4</object-name>
     <object-name>Sensor5</object-name>
-    <object-name>PosLamp</object-name>
-    <object-name>BottomLight</object-name>
-    <object-name>LightTailBase</object-name>
+    <object-name>Sensor6</object-name>
+    <object-name>LightBase</object-name>
     <object-name>BolL</object-name>
     <object-name>BolR</object-name>
     <object-name>GearF1</object-name>
@@ -216,7 +215,7 @@
     <object-name>GearR2-2</object-name>
     <object-name>RuotaR2</object-name>
     <object-name>WindshieldWiperL</object-name>
-    <object-name>Windshield-Wiper-R</object-name>
+    <object-name>WindshieldWiperR</object-name>
 
     <object-name>NextGeneration</object-name>
     <object-name>turretbase</object-name>
@@ -263,6 +262,7 @@
     <object-name>DoorLF</object-name>
     <object-name>DoorLR</object-name>
     <object-name>DoorRR</object-name>
+    <object-name>DoorRH</object-name>
     <object-name>DoorObserverLR</object-name>
     <object-name>DoorObserverRR</object-name>
     <object-name>Hatchback1A</object-name>
@@ -292,9 +292,8 @@
     <object-name>Sensor3</object-name>
     <object-name>Sensor4</object-name>
     <object-name>Sensor5</object-name>
-    <object-name>PosLamp</object-name>
-    <object-name>BottomLight</object-name>
-    <object-name>LightTailBase</object-name>
+    <object-name>Sensor6</object-name>
+    <object-name>LightBase</object-name>
     <object-name>BolL</object-name>
     <object-name>BolR</object-name>
     <object-name>GearF1</object-name>
@@ -322,7 +321,7 @@
     <object-name>GearR2-2</object-name>
     <object-name>RuotaR2</object-name>
     <object-name>WindshieldWiperL</object-name>
-    <object-name>Windshield-Wiper-R</object-name>
+    <object-name>WindshieldWiperR</object-name>
 
     <object-name>NextGeneration</object-name>
     <object-name>turretbase</object-name>
@@ -348,7 +347,7 @@
     <object-name>BulbLightsRear</object-name>
     <object-name>LightRed</object-name>
     <object-name>LightGreen</object-name>
-    <object-name>LightTailLamp</object-name>
+    <object-name>LightLenses</object-name>
     <object-name>propdiscL</object-name>
     <object-name>propblurL</object-name>
     <object-name>propdiscR</object-name>
@@ -713,6 +712,37 @@
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Spoilers -->
+  <animation>
+    <type>rotate</type>
+    <object-name>SpoilerL</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <factor> 60 </factor>
+    <axis>
+      <x1-m> -1.5880 </x1-m>
+      <y1-m> -7.2263 </y1-m>
+      <z1-m>  4.7873 </z1-m>
+      <x2-m> -1.8612 </x2-m>
+      <y2-m> -9.8933 </y2-m>
+      <z2-m>  4.8916 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SpoilerR</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <factor> -60 </factor>
+    <axis>
+      <x1-m> -1.5880 </x1-m>
+      <y1-m>  7.2263 </y1-m>
+      <z1-m>  4.7873 </z1-m>
+      <x2-m> -1.8612 </x2-m>
+      <y2-m>  9.8933 </y2-m>
+      <z2-m>  4.8916 </z2-m>
     </axis>
   </animation>
   
@@ -1498,6 +1528,63 @@
     <axis>
       <x> 0 </x>
       <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Emergency Door -->
+  <animation>
+    <type>pick</type>
+    <object-name>DoorRH</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <condition>
+          <and>
+            <property>/gear/gear[0]/wow</property>
+            <property>/gear/gear[1]/wow</property>
+            <property>/gear/gear[2]/wow</property>
+            <less-than>
+              <property>/gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
+        <command>nasal</command>
+        <script>doors.emergency.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorRH</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.emergency.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>DoorRH</object-name>
+    <property>sim/model/door-positions/emergency/position-norm</property>
+    <factor> 140 </factor>
+    <center>
+      <x-m> -8.0424 </x-m>
+      <y-m>  1.7680 </y-m>
+      <z-m>  3.2044 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
       <z> 0 </z>
     </axis>
   </animation>

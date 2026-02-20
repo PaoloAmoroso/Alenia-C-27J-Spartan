@@ -2,15 +2,24 @@
 
 <PropertyList>
 
-  <engine n="0">
-    <engine-num type="int">0</engine-num>
-    <rpm archive="y">100</rpm>
-    <running>false</running>
+  <engine                    n="0">
+    <engine-num              type="int">0</engine-num>
+    <corrected-fuel-flow-gph type="double">0</corrected-fuel-flow-gph>
+    <on                      type="bool">false</on>
+    <rpm                     type="float">0</rpm>
+    <egt-degC                type="float">0</egt-degC>
+    <oil-temperature-degC    type="float">0</oil-temperature-degC>
+    <running                 type="bool">false</running>
   </engine>
-  <engine n="1">
-    <engine-num type="int">1</engine-num>
-    <rpm archive="y">100</rpm>
-    <running>false</running>
+
+  <engine                    n="1">
+    <engine-num              type="int">1</engine-num>
+    <corrected-fuel-flow-gph type="double">0</corrected-fuel-flow-gph>
+    <on                      type="bool">false</on>
+    <rpm                     type="float">0</rpm>
+    <egt-degC                type="float">0</egt-degC>
+    <oil-temperature-degC    type="float">0</oil-temperature-degC>
+    <running                 type="bool">false</running>
   </engine>
-  
+
 </PropertyList>

@@ -37,13 +37,17 @@
   <engines>
     <engine n="0">
       <cutoff type="bool">true</cutoff>
-      <throttle-fdm type="double">0.07</throttle-fdm>
-      <magnetos>3</magnetos>
+      <throttle-fdm type="double">0.0</throttle-fdm>
+      <throttle type="double">0</throttle>
+      <rpm type="float">0</rpm>
+      <boost type="double">1</boost>
     </engine>
     <engine n="1">
       <cutoff type="bool">true</cutoff>
-      <throttle-fdm type="double">0.07</throttle-fdm>
-      <magnetos>3</magnetos>
+      <throttle-fdm type="double">0.0</throttle-fdm>
+      <throttle type="double">0</throttle>
+      <rpm type="float">0</rpm>
+      <boost type="double">1</boost>
     </engine>
   </engines>
   

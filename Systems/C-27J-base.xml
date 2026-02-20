@@ -4,11 +4,6 @@
 
   <sim include="Systems/C-27J-views.xml">
 
-  <submodels>
-      <serviceable type="bool">true</serviceable>
-      <path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/submodels.xml</path>
-    </submodels>
-
     <description>Alenia C-27J Spartan (YASim)</description>
     <author>Patrizio MELIS (3D/FDM), Emmanuel BARANGER (FDM), Paolo AMOROSO (Upgrades)</author>
     <aircraft-version>0.2</aircraft-version>
@@ -31,20 +26,13 @@
       </livery>
       <hide-flir>false</hide-flir>
       <hide-probe>true</hide-probe>
-      <!-- Magnetic Property works with MAD -->
-      <!-- <magnetic>true</magnetic> -->
     </model> 
 
-    <instrumentation include="instrumentation.xml"/>
+    <submodels>
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Alenia-C-27J-Spartan/Models/Effects/submodels.xml</path>
+    </submodels>
 
-    <flaps>
-      <setting> 0.00 </setting>
-      <setting> 0.25 </setting>
-      <setting> 0.50 </setting>
-      <setting> 0.75 </setting>
-      <setting> 1.00 </setting>
-    </flaps>
-    
     <multiplay>
       <chat_display>1</chat_display>
       <generic> 
@@ -81,14 +69,88 @@
         <string n="9" type="string" />
       </generic>
     </multiplay>
-    
-    <help include="Systems/help.xml"/>
 
-    <flaps include="Systems/flaps.xml"/>
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+
+    <help>
+      <title>Alenia C-27J Spartan</title>
+      <!--
+      <line>______________________________________________</line>
+      -->
+      <key>
+        <name>e</name>
+        <desc>Open/Close Crew Door</desc>
+      </key>
+      <key>
+        <name>E</name>
+        <desc>Open/Close Cargo Ramp</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Open/Close Para Door Left</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open/Close Para Door Right</desc>
+      </key>
+      <key>
+        <name>L</name>
+        <desc>On/Off Landing light</desc>
+      </key>
+      <key>
+        <name>l</name>
+        <desc>On/Off Taxy light</desc>
+      </key>
+      <key>
+        <name>f</name>
+        <desc>On/Off Beacon lights</desc>
+      </key>
+      <key>
+        <name>Ctrl-f</name>
+        <desc>On/Off Navigation lights</desc>
+      </key>
+      <key>
+        <name>F</name>
+        <desc>On/Off Strobes lights</desc>
+      </key>
+      <key>
+        <name>q</name>
+        <desc>Release Flares</desc></key>
+      <key>
+        <name>j</name>
+        <desc>Parachuters</desc></key>
+      <key>
+        <name>r</name>
+        <desc>Release Water (With MAFFS)</desc>
+      </key>
+      <key>
+        <name>Q</name>
+        <desc>Reset View</desc>
+      </key>
+    </help>
+
+    <aircraft-data>
+      <path>/sim/model/hide-NG</path>
+      <path>/sim/model/hide-probe</path>
+      <path>/sim/model/hide-MAFFS</path>
+      <path>/sim/model/hide-flir</path>
+      <path>/sim/model/hide-JEDI</path>
+    </aircraft-data>
 
     <menubar include="Dialogs/C-27J-menu.xml"/>
 
-    <aircraft-data include="aircraft-data.xml"/>
+    <weight n="0">
+      <name>Cargo</name>
+      <weight-lb>1800</weight-lb>
+      <max-lb>12000</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
 
   </sim>
 
@@ -112,21 +174,26 @@
   </systems>
    
   <nasal>
-    <doors>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/doors.nas</file>
-    </doors>
     <C27J>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/liveries.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/light.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Electrical.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Systems.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/cdu.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/convert.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Electrical.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/light.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/liveries.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/map.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/nd.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/convert.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radio.nas</file>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/system.nas</file>
     </C27J>
+
+    <engines>
+      <file>Aircraft/Generic/Engines/generic-yasim-engine.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/engines-yasim.nas</file>
+    </engines>
+
+    <doors>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/doors.nas</file>
+    </doors>
 
     <radar>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radar.nas</file>
@@ -140,23 +207,10 @@
 	 <file>Aircraft/Generic/aar.nas</file>
     </aar>
       
-    <engines>
-      <file>Aircraft/Generic/Engines/generic-yasim-engine.nas</file>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/engines-yasim.nas</file>
-    </engines>
-
     <water>
       <file>Aircraft/Alenia-C-27J-Spartan/Nasal/water.nas</file>
     </water>
 
   </nasal>
-
-  <!-- Buck notes: User adjustable payloads -->
-    <weight n="0">
-      <name>Cargo</name>
-      <weight-lb>1800</weight-lb>
-      <max-lb>12000</max-lb>
-      <min-lb>0</min-lb>
-    </weight>
 
 </PropertyList>

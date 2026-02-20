@@ -2,6 +2,8 @@
 #### Helijah                                                     08-2020 ####
 ####                                                             03-2021 ####
 ####                                                             03-2022 ####
+####                                                             08-2022 ####
+####                                                             09-2022 ####
 #### Quelques propriétés utiles                                          ####
 #############################################################################
 
@@ -431,22 +433,22 @@ var convert = func {
   ##################################################
 
   setprop("/engines/engine[0]/egt-degC", convertTemp(getprop("/engines/engine[0]/egt-degf")));
-  setprop("/engines/engine[0]/oil-temperature-degC", convertTemp(getprop("/engines/engine[0]/oil-temperature-degf")));
+  setprop("/engines/engine[0]/oil-temperature-degC", getprop("/engines/engine[0]/oil-temperature"));
 
   setprop("/engines/engine[1]/egt-degC", convertTemp(getprop("/engines/engine[1]/egt-degf")));
-  setprop("/engines/engine[1]/oil-temperature-degC", convertTemp(getprop("/engines/engine[1]/oil-temperature-degf")));
+  setprop("/engines/engine[1]/oil-temperature-degC", getprop("/engines/engine[1]/oil-temperature"));
 
   setprop("/engines/engine[2]/egt-degC", convertTemp(getprop("/engines/engine[2]/egt-degf")));
-  setprop("/engines/engine[2]/oil-temperature-degC", convertTemp(getprop("/engines/engine[2]/oil-temperature-degf")));
+  setprop("/engines/engine[2]/oil-temperature-degC", getprop("/engines/engine[2]/oil-temperature"));
 
   setprop("/engines/engine[3]/egt-degC", convertTemp(getprop("/engines/engine[3]/egt-degf")));
-  setprop("/engines/engine[3]/oil-temperature-degC", convertTemp(getprop("/engines/engine[3]/oil-temperature-degf")));
+  setprop("/engines/engine[3]/oil-temperature-degC", getprop("/engines/engine[3]/oil-temperature"));
 
   setprop("/engines/engine[4]/egt-degC", convertTemp(getprop("/engines/engine[4]/egt-degf")));
-  setprop("/engines/engine[4]/oil-temperature-degC", convertTemp(getprop("/engines/engine[4]/oil-temperature-degf")));
+  setprop("/engines/engine[4]/oil-temperature-degC", getprop("/engines/engine[4]/oil-temperature"));
 
   setprop("/engines/engine[5]/egt-degC", convertTemp(getprop("/engines/engine[5]/egt-degf")));
-  setprop("/engines/engine[5]/oil-temperature-degC", convertTemp(getprop("/engines/engine[5]/oil-temperature-degf")));
+  setprop("/engines/engine[5]/oil-temperature-degC", getprop("/engines/engine[5]/oil-temperature"));
 
   setprop("/engines/engine[0]/itt-norm", getprop("/engines/engine[0]/cht-degC") / 100);
   setprop("/engines/engine[1]/itt-norm", getprop("/engines/engine[1]/cht-degC") / 100);

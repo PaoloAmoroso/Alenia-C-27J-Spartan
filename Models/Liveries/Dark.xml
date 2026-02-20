@@ -6,18 +6,18 @@
     
     <model>
       <livery>
-        <name type="string">MC-27J, Dark</name>
+        <name type="string">MC-27J, ItAF</name>
         <texture>Liveries/Dark.png</texture>
         <specular>
-          <red>   0.0 </red>
-          <green> 0.0 </green>
-          <blue>  0.0 </blue>
+          <red>   0.1 </red>
+          <green> 0.1 </green>
+          <blue>  0.1 </blue>
         </specular>
       </livery>
-      <c27j>
+      <C27J>
         <SensorA type="bool">true</SensorA>
         <SensorB type="bool">true</SensorB>
-      </c27j>
+      </C27J>
     </model>
     
   </sim>

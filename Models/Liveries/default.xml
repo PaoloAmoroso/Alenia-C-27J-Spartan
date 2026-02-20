@@ -6,7 +6,7 @@
     
     <model>
       <livery>
-        <name type="string">Default</name>
+        <name type="string">C-27J, ItAF</name>
         <texture>texture.png</texture>
         <specular>
           <red>   0.2 </red>

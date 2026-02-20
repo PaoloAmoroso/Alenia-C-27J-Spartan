@@ -16,7 +16,7 @@
       </livery>
       <C27J>
         <SensorA type="bool">false</SensorA>
-        <SensorB type="bool">true</SensorB>
+        <SensorB type="bool">false</SensorB>
       </C27J>
     </model>
     

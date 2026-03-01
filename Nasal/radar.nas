@@ -355,3 +355,103 @@ var RADAR_init = func {
 }
 
 RADAR_init();
+
+#================================================================
+#              FORWARD LOOKING TERRAIN RADAR Mode
+#================================================================
+
+print("*** FORWARD LOOKING TERRAIN RADAR INIT ***");
+
+var FL_DEG2RAD  = 0.01745329252;
+var FL_TERRAIN  = "/instrumentation/terrain-map/pixels/";
+
+var FL_MAX_ROW      = 30;
+var FL_MAX_COL      = 30;
+var FL_RAY_STEPS    = 6;        
+var FL_MAX_RANGE_NM = 10;
+var FL_FT_PER_NM    = 6076;
+
+var FL_row        = 0;
+var FL_active     = 0;   
+
+var FL_get_elevation = func(lat, lon) {
+    var info = geodinfo(lat, lon);
+    if (info == nil) return -1;
+    if (info[1] == nil) return info[0] * 3.2808399; 
+    if (info[1].solid == 0) return 0;
+    return info[0] * 3.2808399;
+}
+
+var FL_update = func {
+
+    if (getprop("/instrumentation/terrain-map/forward-looking") != 1)
+        return;
+
+    var lat     = getprop("/position/latitude-deg");
+    var lon     = getprop("/position/longitude-deg");
+    var heading = getprop("/orientation/heading-magnetic-deg");
+    var pitch   = getprop("/orientation/pitch-deg");
+    var alt_ft  = getprop("/position/altitude-ft");
+
+    var range_nm = getprop("/instrumentation/terrain-map/range");
+    if (range_nm == nil) range_nm = FL_MAX_RANGE_NM;
+
+    var row = FL_row;
+    var dist_nm_row = (row + 1) * (range_nm / (FL_MAX_ROW + 1));
+
+    for (var col = 0; col <= FL_MAX_COL; col += 2) {
+
+        var lateral_nm = (col - FL_MAX_COL/2) * (range_nm / FL_MAX_COL);
+
+        var base_lat = lat + (lateral_nm * math.cos(FL_DEG2RAD * (heading + 90)) / 60);
+        var base_lon = lon + (lateral_nm * math.sin(FL_DEG2RAD * (heading + 90)) / 60);
+
+        var hit = -1;
+
+        for (var s = 1; s <= FL_RAY_STEPS; s += 1) {
+
+            var frac    = s / FL_RAY_STEPS;
+            var dist_nm = dist_nm_row * frac;
+            var dist_ft = dist_nm * FL_FT_PER_NM;
+
+            var ray_alt = alt_ft + math.tan(FL_DEG2RAD * pitch) * dist_ft;
+
+            var testlat = base_lat + (dist_nm * math.cos(FL_DEG2RAD * heading) / 60);
+            var testlon = base_lon + (dist_nm * math.sin(FL_DEG2RAD * heading) / 60);
+
+            var terr = FL_get_elevation(testlat, testlon);
+
+            if (terr >= ray_alt and terr >= 0) {
+                hit = terr;
+                break;
+            }
+        }
+
+        setprop(FL_TERRAIN ~ "row[" ~ row ~ "]/col[" ~ col ~ "]/elevation-ft", hit);
+    }
+
+    for (var col = 1; col < FL_MAX_COL; col += 2) {
+        var a = getprop(FL_TERRAIN ~ "row[" ~ row ~ "]/col[" ~ (col-1) ~ "]/elevation-ft");
+        var b = getprop(FL_TERRAIN ~ "row[" ~ row ~ "]/col[" ~ (col+1) ~ "]/elevation-ft");
+        setprop(FL_TERRAIN ~ "row[" ~ row ~ "]/col[" ~ col ~ "]/elevation-ft", (a + b) / 2);
+    }
+
+    FL_row += 1;
+    if (FL_row > FL_MAX_ROW) FL_row = 0;
+}
+
+var FL_loop = func {
+    FL_update();
+    settimer(FL_loop, 0.02);
+}
+
+var FL_syncLoop = func {
+    FL_syncTerrainMap();
+    settimer(FL_syncLoop, 0.3);
+}
+
+setlistener("sim/signals/fdm-initialized", func {
+    print("Forward Looking Terrain Radar READY");
+    FL_loop();
+    FL_syncLoop();
+});

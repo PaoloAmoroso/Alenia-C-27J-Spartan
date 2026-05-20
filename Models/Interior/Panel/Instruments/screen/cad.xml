@@ -6,6 +6,7 @@
 
   <animation>
     <object-name>face</object-name>
+    <object-name>Screen.off</object-name>
     <object-name>canvasCadre</object-name>
 
     <object-name>vitre</object-name>
@@ -14,6 +15,7 @@
   <animation>
     <type>noshadow</type>
     <object-name>face</object-name>
+    <object-name>Screen.off</object-name>
     <object-name>canvasCadre</object-name>
     <object-name>vitre</object-name>
   </animation>
@@ -36,6 +38,17 @@
       <green> 0.40 </green>
       <blue>  0.30 </blue>
     </emission>
+  </animation>
+
+  <!-- TURN-OFF SCREEN -->
+  <animation>
+    <type>select</type>
+    <object-name>Screen.off</object-name>
+    <condition>
+      <not>
+        <property>controls/electric/battery-switch</property>
+      </not>
+    </condition>
   </animation>
 
 </PropertyList>

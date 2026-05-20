@@ -14,6 +14,7 @@
     <object-name>btn</object-name>
     
     <object-name>EICAS.face</object-name>
+    <object-name>EICAS.back</object-name>
     <object-name>LH-N1</object-name>
     <object-name>RH-N1</object-name>
     <object-name>LH-ITT</object-name>
@@ -198,6 +199,17 @@
       <green> 1 </green>
       <blue>  1 </blue>
     </emission>
+  </animation>
+
+  <!-- TURN-OFF SCREEN -->
+  <animation>
+    <type>select</type>
+    <object-name>EICAS.back</object-name>
+    <condition>
+      <not>
+        <property>controls/electric/battery-switch</property>
+      </not>
+    </condition>
   </animation>
   
   <animation>

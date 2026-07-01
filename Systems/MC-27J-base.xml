@@ -287,11 +287,8 @@
     </doors>
 
     <radar>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/radar.nas</file>
+      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/Radar.nas</file>
     </radar>
-    <terrain-map>
-      <file>Aircraft/Alenia-C-27J-Spartan/Nasal/terrain-map.nas</file>
-    </terrain-map>
 
     <aar>
 	 <file>Aircraft/Generic/aar.nas</file>

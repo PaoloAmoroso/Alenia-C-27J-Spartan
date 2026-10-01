@@ -2,12 +2,131 @@
 
 <PropertyList>
 
+  <adf>
+    <name>adf</name>
+    <number>0</number>
+  </adf>
+  
+  <adf>
+    <name>adf</name>
+    <number>1</number>
+  </adf>
+  
+  <airspeed-indicator>
+    <name>airspeed-indicator</name>
+    <number>0</number>
+    <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    <index n="0" type="double">100</index>
+    <index n="1" type="double">120</index>
+    <ias-limit>350.0</ias-limit>
+    <mach-limit>0.85</mach-limit>
+    <alt-threshold>8000.0</alt-threshold>
+  </airspeed-indicator>
+  
+  <altimeter>
+    <name>altimeter</name>
+    <number>0</number>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  </altimeter>
+  
+  <attitude-indicator>
+    <name>attitude-indicator</name>
+    <number>0</number>
+    <suction>/systems/vacuum/suction-inhg</suction>
+  </attitude-indicator>
+  
+  <inst-vertical-speed-indicator>
+    <name>inst-vertical-speed-indicator</name>
+    <number>0</number>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  </inst-vertical-speed-indicator>
+  
+  <clock>
+    <name>clock</name>
+    <number>0</number>
+  </clock>
+  
+  <heading-indicator>
+    <name>heading-indicator</name>
+    <number>0</number>
+    <suction>/systems/vacuum/suction-inhg</suction>
+  </heading-indicator>
+  
+  <heading-indicator-dg>
+    <name>heading-indicator-dg</name>
+    <number>0</number>
+  </heading-indicator-dg>
+  
+  <magnetic-compass>
+    <name>magnetic-compass</name>
+    <number>0</number>
+  </magnetic-compass>
+  
+  <nav-radio>
+    <name>nav</name>
+    <number>0</number>
+  </nav-radio>
+  
+  <nav-radio>
+    <name>nav</name>
+    <number>1</number>
+  </nav-radio>
+  
+  <dme>
+    <name>dme</name>
+    <number>0</number>
+  </dme>
+  
+  <dme>
+    <name>dme</name>
+    <number>1</number>
+  </dme>
+  
+  <slip-skid-ball>
+    <name>slip-skid-ball</name>
+    <number>0</number>
+  </slip-skid-ball>
+  
+  <turn-indicator>
+    <name>turn-indicator</name>
+    <number>0</number>
+  </turn-indicator>
+    
+  <navigation-display>
+    <name>nd</name>
+    <number>0</number>
+    <symbols include="nav-display.xml"/>
+  </navigation-display>
+  
+  <marker-beacon>
+    <name>marker-beacon</name>
+    <number>0</number>
+  </marker-beacon>
+
+  <transponder>
+    <name>transponder</name>
+    <number>0</number>
+    <inputs>
+      <knob-mode type="int">5</knob-mode>
+      <ident-run type="double">0.0</ident-run>
+    </inputs>
+  </transponder>
+
+  <encoder>
+    <name>encoder</name>
+    <number>0</number>
+  </encoder>
+
   <pfd>
     <minimums-baro type="int">200</minimums-baro>
     <minimums-radio type="int">200</minimums-radio>
   </pfd>
 
-  <mk-viii>                           <!-- http://wiki.flightgear.org/index.php/GPWS -->
+  <mk-viii> 
+    <name>mk-viii</name>
+    <number>0</number>
+    <!-- http://wiki.flightgear.org/index.php/GPWS -->
     <serviceable>true</serviceable>
     <configuration-module>
       <category-1> 255 </category-1>  <!-- AIRCRAFT_MODE_TYPE_SELECT -->
@@ -54,24 +173,6 @@
     </ident>
   </cdu>
 
-  <tcas>
-    <serviceable type="bool">true</serviceable>
-    <inputs>
-      <mode type="int">1</mode> <!--0=off,1=standby,2=TA-only,3=auto(TA/RA)-->
-    </inputs>
-    <voice>
-      <file-prefix type="string">Aircraft/CitationX/Sounds/tcas/female/</file-prefix>
-    </voice>
-    <tfc n="0" type="bool">0</tfc>
-    <tfc n="1" type="bool">0</tfc>
-    <speaker>
-      <max-dist type="double">10</max-dist>
-      <reference-dist type="double">2</reference-dist>
-      <volume type="double"> 1 </volume>
-    </speaker>
-    <range type="int">6</range>
-  </tcas>
-
   <nd>
     <radar-texture-path type="string">Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/tcas-display.png</radar-texture-path>
     <symbol-texture-path type="string">Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/symbols.png</symbol-texture-path>
@@ -95,11 +196,31 @@
     <display>
       <arpt type="bool">1</arpt>
       <vor type="bool">1</vor>
-      <fix type="bool">0</fix>
-      <tcas type="bool">0</tcas>
+      <fix type="bool">1</fix>
+      <tcas type="bool">1</tcas>
     </display>
     <line-width type="double">3</line-width>
   </nd>
+
+  <tcas>
+    <name>tcas</name>
+    <number>0</number>
+    <serviceable type="bool">true</serviceable>
+    <inputs>
+      <mode type="int">1</mode> <!--0=off,1=standby,2=TA-only,3=auto(TA/RA)-->
+    </inputs>
+    <voice>
+      <file-prefix type="string">Aircraft/CitationX/Sounds/tcas/female/</file-prefix>
+    </voice>
+    <tfc n="0" type="bool">0</tfc>
+    <tfc n="1" type="bool">0</tfc>
+    <speaker>
+      <max-dist type="double">10</max-dist>
+      <reference-dist type="double">2</reference-dist>
+      <volume type="double"> 1 </volume>
+    </speaker>
+    <range type="int">6</range>
+  </tcas>
 
   <tcas-display>
     <radar-texture-path type="string">Aircraft/Alenia-C-27J-Spartan/Models/Interior/Panel/Instruments/mfd-pfd/tcas-display.png</radar-texture-path>
@@ -153,14 +274,6 @@
     </unit>
   </rmu>
 
-  <airspeed-indicator>
-    <index n="0" type="double">100</index>
-    <index n="1" type="double">120</index>
-    <ias-limit>350.0</ias-limit>
-    <mach-limit>0.85</mach-limit>
-    <alt-threshold>8000.0</alt-threshold>
-  </airspeed-indicator>
-
   <kr-87>
     <inputs>
       <audio-btn>0</audio-btn>
@@ -198,13 +311,6 @@
     </pfd>
   </primus2000>
 
-  <transponder>
-    <inputs>
-      <knob-mode type="int">5</knob-mode>
-      <ident-run type="double">0.0</ident-run>
-    </inputs>
-  </transponder>
-
   <nav n="0">
     <nav-id type="string"></nav-id>
   </nav>
@@ -213,20 +319,26 @@
     <nav-id type="string"></nav-id>
   </nav>
 
+  <groundradar>
+    <name>groundradar</name>
+    <!--airport-id-source>instrumentation/groundradar/id</airport-id-source-->
+    <range-source>instrumentation/groundradar/range</range-source>
+  </groundradar>
+
   <radar>
-    <serviceable type="bool" archive="y">true</serviceable>
-    <switch type="string" archive="y">off</switch>
-    <mode-control type="int" archive="y">3</mode-control>
-    <range type="int" archive="y">20</range>
-    <mode type="string" archive="y">WX</mode>
-    <heading-marker type="bool" archive="y">false</heading-marker>
-    <lightning type="bool" archive="y">false</lightning>
-    <display-mode type="string">NOARC</display-mode>
-     <display-controls>
-       <WX type="bool" archive="y">false</WX>
-       <data type="bool" archive="y">false</data>
-       <pos type="bool" archive="y">true</pos>
-     </display-controls>
+    <enabled                        type="bool">true</enabled>
+    <az-field                       type="double">120</az-field>
+    <range                          type="double">20</range>
+    <range-factor                   type="double" archive="n"> 0.001888 </range-factor>
+    <range-selected                 type="double">40</range-selected>
+    <display-rdr                    type="bool">true</display-rdr>
+    <display-mode                   type="string">NOARC</display-mode>
+    <radar-standby                  type="int">0</radar-standby>
+    <minimized                      type="bool" archive="y">false</minimized>
+    <mode>
+      <rws                          type="bool">true</rws>
+      <tws-auto                     type="bool">false</tws-auto>
+    </mode>
   </radar>
 
 </PropertyList>

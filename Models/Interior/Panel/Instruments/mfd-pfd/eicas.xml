@@ -23,6 +23,8 @@
     <object-name>STABneedle</object-name>
     <object-name>oiltemp1</object-name>
     <object-name>oiltemp2</object-name>
+    <object-name>oilpsi1</object-name>
+    <object-name>oilpsi2</object-name>
     <object-name>gear0.annun</object-name>
     <object-name>gear1.annun</object-name>
     <object-name>gear2.annun</object-name>
@@ -127,6 +129,8 @@
     <object-name>STABneedle</object-name>
     <object-name>oiltemp1</object-name>
     <object-name>oiltemp2</object-name>
+    <object-name>oilpsi1</object-name>
+    <object-name>oilpsi2</object-name>
     <object-name>gear0.annun</object-name>
     <object-name>gear1.annun</object-name>
     <object-name>gear2.annun</object-name>
@@ -290,7 +294,8 @@
   <animation>
     <type>translate</type>
     <object-name>oiltemp1</object-name>
-    <property>engines/engine[0]/oilt-norm</property>
+    <!-- <property>engines/engine[0]/oilt-norm</property> -->
+    <property>engines/engine[0]/oil-temperature</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.02 </dep></entry>
@@ -305,7 +310,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>oiltemp1</object-name>
-    <property>engines/engine[0]/oilt-norm</property>
+    <!-- <property>engines/engine[0]/oilt-norm</property> -->
+    <property>engines/engine[0]/oil-temperature</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0000 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.0812 </dep></entry>
@@ -320,7 +326,8 @@
   <animation>
     <type>translate</type>
     <object-name>oiltemp2</object-name>
-    <property>engines/engine[1]/oilt-norm</property>
+    <!-- <property>engines/engine[1]/oilt-norm</property> -->
+    <property>engines/engine[1]/oil-temperature</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.000 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.020 </dep></entry>
@@ -335,7 +342,8 @@
   <animation>
     <type>textranslate</type>
     <object-name>oiltemp2</object-name>
-    <property>engines/engine[1]/oilt-norm</property>
+    <!-- <property>engines/engine[1]/oilt-norm</property> -->
+    <property>engines/engine[1]/oil-temperature</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0000 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.0812 </dep></entry>
@@ -350,7 +358,8 @@
   <animation>
     <type>translate</type>
     <object-name>oilpsi1</object-name>
-    <property>engines/engine[0]/oilp-norm</property>
+    <!-- <property>engines/engine[0]/oilp-norm</property> -->
+    <property>engines/engine[0]/oil-pressure-psi</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0000 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.0190 </dep></entry>
@@ -361,7 +370,7 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+<!--
   <animation>
     <type>textranslate</type>
     <object-name>oilpsi1</object-name>
@@ -376,11 +385,12 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+-->
   <animation>
     <type>translate</type>
     <object-name>oilpsi2</object-name>
-    <property>engines/engine[1]/oilp-norm</property>
+    <!-- <property>engines/engine[1]/oilp-norm</property> -->
+    <property>engines/engine[1]/oil-pressure-psi</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0000 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.0190 </dep></entry>
@@ -391,7 +401,7 @@
       <z> 1 </z>
     </axis>
   </animation>
-
+<!--
   <animation>
     <type>textranslate</type>
     <object-name>oilpsi2</object-name>
@@ -406,7 +416,7 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+-->
   <animation>
     <type>textranslate</type>
     <object-name>LH-N1</object-name>
@@ -970,7 +980,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Lpph4</object-name>
-    <property>engines/engine/fuel-flow_pph</property>
+    <property>engines/engine/fuel-flow-gph</property>
     <factor>0.0001</factor>
     <step>1000</step>
     <axis>
@@ -983,7 +993,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Lpph3</object-name>
-    <property>engines/engine/fuel-flow_pph</property>
+    <property>engines/engine/fuel-flow-gph</property>
     <factor>0.001</factor>
     <step>100</step>
     <axis>
@@ -996,7 +1006,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Lpph2</object-name>
-    <property>engines/engine/fuel-flow_pph</property>
+    <property>engines/engine/fuel-flow-gph</property>
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -1009,7 +1019,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Lpph1</object-name>
-    <property>engines/engine/fuel-flow_pph</property>
+    <property>engines/engine/fuel-flow-gph</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -1023,7 +1033,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Rpph4</object-name>
-    <property>engines/engine[1]/fuel-flow_pph</property>
+    <property>engines/engine[1]/fuel-flow-gph</property>
     <factor>0.0001</factor>
     <step>1000</step>
     <axis>
@@ -1036,7 +1046,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Rpph3</object-name>
-    <property>engines/engine[1]/fuel-flow_pph</property>
+    <property>engines/engine[1]/fuel-flow-gph</property>
     <factor>0.001</factor>
     <step>100</step>
     <axis>
@@ -1049,7 +1059,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Rpph2</object-name>
-    <property>engines/engine[1]/fuel-flow_pph</property>
+    <property>engines/engine[1]/fuel-flow-gph</property>
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -1062,7 +1072,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>Rpph1</object-name>
-    <property>engines/engine[1]/fuel-flow_pph</property>
+    <property>engines/engine[1]/fuel-flow-gph</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>

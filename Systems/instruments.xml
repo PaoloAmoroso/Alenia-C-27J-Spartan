@@ -341,4 +341,8 @@
     </mode>
   </radar>
 
+  <terrain-map>
+    <forward-looking                  type="int">0</forward-looking>
+  </terrain-map>
+
 </PropertyList>

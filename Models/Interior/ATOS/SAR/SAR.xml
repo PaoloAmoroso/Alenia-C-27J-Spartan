@@ -8653,4 +8653,40 @@
     </axis>
   </animation>
 
+<!-- -->
+
+<animation n="992">
+  <type type="string">select</type>
+  <object-name type="string">Center_1</object-name>
+  <condition>
+   <and>
+    <equals>
+      <property>/instrumentation/radar/display-mode</property>
+      <value>NOARC</value>
+    </equals>
+    <equals>
+      <property>/instrumentation/terrain-map/forward-looking</property>
+      <value>0</value>
+    </equals>
+   </and>
+  </condition>
+</animation>
+
+<animation n="993">
+  <type type="string">select</type>
+  <object-name type="string">Center_2</object-name>
+  <condition>
+   <or>
+    <equals>
+      <property>/instrumentation/radar/display-mode</property>
+      <value>ARC</value>
+    </equals>
+    <equals>
+      <property>/instrumentation/terrain-map/forward-looking</property>
+      <value>1</value>
+    </equals>
+   </or>
+  </condition>
+</animation>
+
 </PropertyList>
